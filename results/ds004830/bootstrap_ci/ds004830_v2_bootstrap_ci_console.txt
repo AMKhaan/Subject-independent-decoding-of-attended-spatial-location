@@ -1,0 +1,158 @@
+
+##### bootstrap_ci.py  2026-09-18 19:28  data=D:\fnirs\Extra\Extra\Code\analysis\data_v2
+
+==============================================================================
+task 3class   chance 33.3%   12 subjects, 907 correct trials   data D:\fnirs\Extra\Extra\Code\analysis\data_v2
+==============================================================================
+
+--- within: group mean with 95% intervals (unit = subject, B = 10000) ---
+  model                   mean        percentile               BCa           2-level        t-interval   Wilcoxon p
+  LDA (Ledoit-Wolf)     57.32%        46.3- 67.9        45.6- 67.5        46.4- 68.2        44.6- 70.0   0.0034
+  Logistic (L2)         56.93%        45.8- 67.6        45.5- 67.2        45.9- 68.1        44.1- 69.7   0.0034
+  SVM (RBF)             54.51%        46.0- 63.3        45.8- 63.1        45.9- 63.5        44.5- 64.5   0.0007
+  Random Forest *       58.55%        47.6- 70.0        47.4- 69.6        47.0- 69.8        45.4- 71.7   0.0012
+  * = best model on the observed data, the one decode.py reports
+
+  per-subject exact binomial, Random Forest (first CV repeat):
+  subject     correct      acc         p    Holm p
+  sub-08      62/83      74.7%    0.0000    0.0000  *
+  sub-12      77/84      91.7%    0.0000    0.0000  *
+  sub-13      39/87      44.8%    0.0168    0.0842
+  sub-14      17/70      24.3%    0.9615    1.0000
+  sub-15      30/66      45.5%    0.0270    0.1081
+  sub-16      64/85      75.3%    0.0000    0.0000  *
+  sub-19      76/87      87.4%    0.0000    0.0000  *
+  sub-21      46/73      63.0%    0.0000    0.0000  *
+  sub-22      36/71      50.7%    0.0019    0.0111  *
+  sub-23      27/71      38.0%    0.2358    0.7074
+  sub-24      56/86      65.1%    0.0000    0.0000  *
+  sub-25      14/44      31.8%    0.6394    1.0000
+  individually above chance: 9/12 at p < .05 uncorrected, 7/12 after Holm   (by eye, > chance: 10/12)
+
+--- loso: group mean with 95% intervals (unit = subject, B = 10000) ---
+  model                   mean        percentile               BCa           2-level        t-interval   Wilcoxon p
+  LDA (Ledoit-Wolf)     43.49%        37.8- 48.7        37.6- 48.5        37.0- 49.5        37.2- 49.8   0.0034
+  Logistic (L2) *       44.20%        38.8- 49.7        38.9- 49.8        37.8- 50.9        37.7- 50.7   0.0027
+  SVM (RBF)             41.65%        36.5- 47.3        36.8- 47.6        35.4- 48.0        35.3- 48.0   0.0061
+  Random Forest         42.00%        35.2- 48.6        34.8- 48.3        34.8- 49.1        34.1- 49.9   0.0386
+  * = best model on the observed data, the one decode.py reports
+
+  per-subject exact binomial, Logistic (L2):
+  subject     correct      acc         p    Holm p
+  sub-08      50/83      60.2%    0.0000    0.0000  *
+  sub-12      32/84      38.1%    0.2077    1.0000
+  sub-13      32/87      36.8%    0.2820    1.0000
+  sub-14      20/70      28.6%    0.8343    1.0000
+  sub-15      29/66      43.9%    0.0469    0.2815
+  sub-16      47/85      55.3%    0.0000    0.0003  *
+  sub-19      38/87      43.7%    0.0284    0.2093
+  sub-21      37/73      50.7%    0.0016    0.0147  *
+  sub-22      32/71      45.1%    0.0262    0.2093
+  sub-23      27/71      38.0%    0.2358    1.0000
+  sub-24      50/86      58.1%    0.0000    0.0000  *
+  sub-25      14/44      31.8%    0.6394    1.0000
+  individually above chance: 7/12 at p < .05 uncorrected, 4/12 after Holm   (by eye, > chance: 10/12)
+
+--- selection-aware permutation null, 200 permutations (0 already checkpointed) ---
+    16/200 permutations (59 s for 16)
+    32/200 permutations (61 s for 16)
+    48/200 permutations (84 s for 16)
+    64/200 permutations (74 s for 16)
+    80/200 permutations (93 s for 16)
+    96/200 permutations (78 s for 16)
+    112/200 permutations (79 s for 16)
+    128/200 permutations (96 s for 16)
+    144/200 permutations (80 s for 16)
+    160/200 permutations (83 s for 16)
+    176/200 permutations (103 s for 16)
+    192/200 permutations (115 s for 16)
+    200/200 permutations (85 s for 8)
+  within  best = Random Forest, observed 58.55%
+    null of that model alone : mean 34.71%  95th 38.12%  p = 0.0050
+    null of max over 4 models: mean 35.86%  95th 38.41%  p = 0.0050  (floor)
+  loso    best = Logistic (L2), observed 44.20%
+    null of that model alone : mean 33.26%  95th 35.97%  p = 0.0050
+    null of max over 4 models: mean 34.96%  95th 37.09%  p = 0.0050  (floor)
+
+==============================================================================
+task lateral   chance 50.0%   12 subjects, 588 correct trials   data D:\fnirs\Extra\Extra\Code\analysis\data_v2
+==============================================================================
+  computed within|LDA (Ledoit-Wolf)          75.55%  (18 s)
+  computed within|Logistic (L2)              76.81%  (2 s)
+  computed within|SVM (RBF)                  76.39%  (1 s)
+  computed within|Random Forest              78.67%  (110 s)
+  computed loso|LDA (Ledoit-Wolf)            60.81%  (1 s)
+  computed loso|Logistic (L2)                62.17%  (0 s)
+  computed loso|SVM (RBF)                    56.24%  (0 s)
+  computed loso|Random Forest                54.89%  (6 s)
+
+--- within: group mean with 95% intervals (unit = subject, B = 10000) ---
+  model                   mean        percentile               BCa           2-level        t-interval   Wilcoxon p
+  LDA (Ledoit-Wolf)     75.55%        63.9- 86.2        62.5- 85.3        63.7- 86.3        62.6- 88.5   0.0034
+  Logistic (L2)         76.81%        66.3- 86.5        65.0- 85.8        65.9- 86.7        64.7- 88.9   0.0017
+  SVM (RBF)             76.39%        69.0- 83.5        68.6- 83.2        68.0- 84.1        67.8- 85.0   0.0002
+  Random Forest *       78.67%        69.3- 87.3        68.5- 86.8        68.8- 87.6        68.0- 89.3   0.0005
+  * = best model on the observed data, the one decode.py reports
+
+  per-subject exact binomial, Random Forest (first CV repeat):
+  subject     correct      acc         p    Holm p
+  sub-08      49/54      90.7%    0.0000    0.0000  *
+  sub-12      52/56      92.9%    0.0000    0.0000  *
+  sub-13      42/58      72.4%    0.0004    0.0022  *
+  sub-14      24/45      53.3%    0.3830    0.7660
+  sub-15      27/42      64.3%    0.0442    0.1769
+  sub-16      53/56      94.6%    0.0000    0.0000  *
+  sub-19      57/58      98.3%    0.0000    0.0000  *
+  sub-21      41/46      89.1%    0.0000    0.0000  *
+  sub-22      38/45      84.4%    0.0000    0.0000  *
+  sub-23      27/45      60.0%    0.1163    0.3490
+  sub-24      54/58      93.1%    0.0000    0.0000  *
+  sub-25      12/25      48.0%    0.6550    0.7660
+  individually above chance: 9/12 at p < .05 uncorrected, 8/12 after Holm   (by eye, > chance: 11/12)
+
+--- loso: group mean with 95% intervals (unit = subject, B = 10000) ---
+  model                   mean        percentile               BCa           2-level        t-interval   Wilcoxon p
+  LDA (Ledoit-Wolf)     60.81%        52.0- 69.5        51.8- 69.3        51.3- 70.4        50.6- 71.0   0.0171
+  Logistic (L2) *       62.17%        53.7- 70.9        53.6- 70.8        52.8- 71.2        52.1- 72.2   0.0105
+  SVM (RBF)             56.24%        48.1- 64.3        48.6- 64.7        47.2- 65.5        46.7- 65.8   0.1331
+  Random Forest         54.89%        46.7- 63.4        47.1- 63.9        45.5- 64.2        44.9- 64.8   0.2324
+  * = best model on the observed data, the one decode.py reports
+
+  per-subject exact binomial, Logistic (L2):
+  subject     correct      acc         p    Holm p
+  sub-08      48/54      88.9%    0.0000    0.0000  *
+  sub-12      34/56      60.7%    0.0704    0.4931
+  sub-13      30/58      51.7%    0.4478    1.0000
+  sub-14      23/45      51.1%    0.5000    1.0000
+  sub-15      25/42      59.5%    0.1400    0.8399
+  sub-16      37/56      66.1%    0.0111    0.0890
+  sub-19      21/58      36.2%    0.9876    1.0000
+  sub-21      33/46      71.7%    0.0023    0.0204  *
+  sub-22      33/45      73.3%    0.0012    0.0123  *
+  sub-23      19/45      42.2%    0.8837    1.0000
+  sub-24      49/58      84.5%    0.0000    0.0000  *
+  sub-25      15/25      60.0%    0.2122    1.0000
+  individually above chance: 5/12 at p < .05 uncorrected, 4/12 after Holm   (by eye, > chance: 10/12)
+
+--- selection-aware permutation null, 200 permutations (0 already checkpointed) ---
+    16/200 permutations (81 s for 16)
+    32/200 permutations (81 s for 16)
+    48/200 permutations (81 s for 16)
+    64/200 permutations (79 s for 16)
+    80/200 permutations (76 s for 16)
+    96/200 permutations (75 s for 16)
+    112/200 permutations (75 s for 16)
+    128/200 permutations (75 s for 16)
+    144/200 permutations (74 s for 16)
+    160/200 permutations (76 s for 16)
+    176/200 permutations (75 s for 16)
+    192/200 permutations (75 s for 16)
+    200/200 permutations (56 s for 8)
+  within  best = Random Forest, observed 78.67%
+    null of that model alone : mean 51.64%  95th 55.20%  p = 0.0050
+    null of max over 4 models: mean 53.45%  95th 56.33%  p = 0.0050  (floor)
+  loso    best = Logistic (L2), observed 62.17%
+    null of that model alone : mean 49.95%  95th 53.85%  p = 0.0050
+    null of max over 4 models: mean 51.35%  95th 55.49%  p = 0.0050  (floor)
+
+wrote diagnostics/ci-data_v2.json, .png

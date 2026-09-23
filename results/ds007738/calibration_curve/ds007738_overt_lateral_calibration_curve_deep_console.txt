@@ -1,0 +1,201 @@
+
+##### calibration_curve.py  2026-09-19 07:07  data=D:/fnirs/ds007738/derived/overt  draws=20  test=6/class  k grid=[0, 4, 8, 14, 20, 26, 34, 40]
+deep arm: HemoNet pretrain on N-1, fine-tune on k, 5 seeds, device NVIDIA RTX A4000
+  sub-01 seed 0: source val 73.7%  zero-shot 53.3%  k=30 56.2%  (18 s)
+  sub-01 seed 1: source val 68.7%  zero-shot 55.8%  k=30 57.1%  (34 s)
+  sub-01 seed 2: source val 74.7%  zero-shot 65.0%  k=30 53.8%  (49 s)
+  sub-01 seed 3: source val 71.0%  zero-shot 55.4%  k=30 55.0%  (65 s)
+  sub-01 seed 4: source val 69.3%  zero-shot 42.5%  k=30 54.2%  (80 s)
+  sub-02 seed 0: source val 70.5%  zero-shot 66.2%  k=30 76.2%  (95 s)
+  sub-02 seed 1: source val 69.5%  zero-shot 68.8%  k=30 80.8%  (108 s)
+  sub-02 seed 2: source val 69.5%  zero-shot 74.6%  k=30 78.8%  (122 s)
+  sub-02 seed 3: source val 68.9%  zero-shot 79.6%  k=30 79.6%  (137 s)
+  sub-02 seed 4: source val 70.2%  zero-shot 70.8%  k=30 78.3%  (151 s)
+  sub-03 seed 0: source val 74.7%  zero-shot 50.0%  k=30 51.2%  (169 s)
+  sub-03 seed 1: source val 69.7%  zero-shot 54.2%  k=30 49.6%  (186 s)
+  sub-03 seed 2: source val 73.0%  zero-shot 53.8%  k=30 53.3%  (203 s)
+  sub-03 seed 3: source val 72.0%  zero-shot 54.6%  k=30 50.0%  (221 s)
+  sub-03 seed 4: source val 72.0%  zero-shot 53.3%  k=30 50.8%  (239 s)
+  sub-04 seed 0: source val 70.9%  zero-shot 38.7%  k=30 47.9%  (252 s)
+  sub-04 seed 1: source val 69.9%  zero-shot 45.8%  k=30 46.3%  (267 s)
+  sub-04 seed 2: source val 73.5%  zero-shot 45.4%  k=30 48.8%  (282 s)
+  sub-04 seed 3: source val 72.8%  zero-shot 40.0%  k=30 42.9%  (300 s)
+  sub-04 seed 4: source val 70.2%  zero-shot 41.7%  k=30 44.6%  (317 s)
+  sub-05 seed 0: source val 72.2%  zero-shot 60.8%  k=30 58.8%  (333 s)
+  sub-05 seed 1: source val 71.5%  zero-shot 55.8%  k=30 55.0%  (348 s)
+  sub-05 seed 2: source val 72.5%  zero-shot 68.8%  k=30 59.2%  (365 s)
+  sub-05 seed 3: source val 72.2%  zero-shot 63.8%  k=30 57.1%  (386 s)
+  sub-05 seed 4: source val 70.9%  zero-shot 66.2%  k=30 57.5%  (412 s)
+  sub-10 seed 0: source val 68.2%  zero-shot 90.4%  k=30 85.4%  (440 s)
+  sub-10 seed 1: source val 68.9%  zero-shot 87.1%  k=30 85.0%  (469 s)
+  sub-10 seed 2: source val 67.9%  zero-shot 82.9%  k=30 88.8%  (500 s)
+  sub-10 seed 3: source val 67.5%  zero-shot 72.1%  k=30 84.6%  (529 s)
+  sub-10 seed 4: source val 68.2%  zero-shot 74.2%  k=30 87.1%  (561 s)
+  sub-12 seed 0: source val 71.7%  zero-shot 65.4%  k=30 61.7%  (604 s)
+  sub-12 seed 1: source val 72.0%  zero-shot 62.1%  k=30 63.7%  (646 s)
+  sub-12 seed 2: source val 70.0%  zero-shot 57.9%  k=30 67.9%  (688 s)
+  sub-12 seed 3: source val 74.0%  zero-shot 68.3%  k=30 65.8%  (729 s)
+  sub-12 seed 4: source val 70.3%  zero-shot 69.2%  k=30 70.4%  (769 s)
+  sub-13 seed 0: source val 72.3%  zero-shot 67.1%  k=30 72.1%  (822 s)
+  sub-13 seed 1: source val 71.3%  zero-shot 42.1%  k=30 71.2%  (872 s)
+  sub-13 seed 2: source val 76.3%  zero-shot 60.8%  k=30 72.1%  (924 s)
+  sub-13 seed 3: source val 69.0%  zero-shot 50.0%  k=30 65.0%  (975 s)
+  sub-13 seed 4: source val 73.3%  zero-shot 57.9%  k=30 73.3%  (1027 s)
+  sub-14 seed 0: source val 69.9%  zero-shot 56.2%  k=30 66.7%  (1078 s)
+  sub-14 seed 1: source val 69.9%  zero-shot 66.3%  k=30 67.5%  (1133 s)
+  sub-14 seed 2: source val 69.9%  zero-shot 60.8%  k=30 66.7%  (1184 s)
+  sub-14 seed 3: source val 67.5%  zero-shot 49.2%  k=30 69.6%  (1235 s)
+  sub-14 seed 4: source val 66.2%  zero-shot 56.7%  k=30 72.1%  (1288 s)
+  sub-15 seed 0: source val 72.8%  zero-shot 57.1%  k=30 63.8%  (1340 s)
+  sub-15 seed 1: source val 70.5%  zero-shot 60.4%  k=30 61.7%  (1393 s)
+  sub-15 seed 2: source val 76.8%  zero-shot 48.8%  k=30 54.2%  (1450 s)
+  sub-15 seed 3: source val 71.9%  zero-shot 70.4%  k=30 64.2%  (1502 s)
+  sub-15 seed 4: source val 67.9%  zero-shot 60.8%  k=30 65.4%  (1553 s)
+  sub-18 seed 0: source val 70.2%  zero-shot 80.4%  k=30 93.8%  (1594 s)
+  sub-18 seed 1: source val 64.9%  zero-shot 85.4%  k=30 92.9%  (1635 s)
+  sub-18 seed 2: source val 70.9%  zero-shot 83.8%  k=30 93.3%  (1675 s)
+  sub-18 seed 3: source val 68.2%  zero-shot 92.1%  k=30 93.8%  (1715 s)
+  sub-18 seed 4: source val 64.2%  zero-shot 62.5%  k=30 87.5%  (1758 s)
+  sub-20 seed 0: source val 70.9%  zero-shot 67.1%  k=30 75.8%  (1788 s)
+  sub-20 seed 1: source val 71.2%  zero-shot 68.3%  k=30 73.3%  (1818 s)
+  sub-20 seed 2: source val 71.5%  zero-shot 66.7%  k=30 70.0%  (1848 s)
+  sub-20 seed 3: source val 68.5%  zero-shot 76.2%  k=30 76.7%  (1878 s)
+  sub-20 seed 4: source val 72.8%  zero-shot 72.1%  k=30 72.9%  (1909 s)
+  sub-22 seed 0: source val 72.7%  zero-shot 69.6%  k=30 67.5%  (1950 s)
+  sub-22 seed 1: source val 69.0%  zero-shot 60.8%  k=30 63.3%  (1993 s)
+  sub-22 seed 2: source val 74.0%  zero-shot 50.0%  k=30 62.1%  (2034 s)
+  sub-22 seed 3: source val 69.7%  zero-shot 60.8%  k=30 61.7%  (2076 s)
+  sub-22 seed 4: source val 68.7%  zero-shot 52.1%  k=30 65.8%  (2117 s)
+  sub-23 seed 0: source val 71.4%  zero-shot 42.5%  k=30 nan%  (2136 s)
+  sub-23 seed 1: source val 70.1%  zero-shot 48.3%  k=30 nan%  (2155 s)
+  sub-23 seed 2: source val 73.4%  zero-shot 47.5%  k=30 nan%  (2175 s)
+  sub-23 seed 3: source val 72.4%  zero-shot 51.7%  k=30 nan%  (2196 s)
+  sub-23 seed 4: source val 71.7%  zero-shot 53.3%  k=30 nan%  (2215 s)
+  sub-24 seed 0: source val 67.9%  zero-shot 36.7%  k=30 nan%  (2224 s)
+  sub-24 seed 1: source val 74.7%  zero-shot 39.6%  k=30 nan%  (2233 s)
+  sub-24 seed 2: source val 73.7%  zero-shot 30.8%  k=30 nan%  (2243 s)
+  sub-24 seed 3: source val 73.4%  zero-shot 27.1%  k=30 nan%  (2252 s)
+  sub-24 seed 4: source val 70.8%  zero-shot 40.0%  k=30 nan%  (2260 s)
+  sub-25 seed 0: source val 67.7%  zero-shot 59.6%  k=30 50.8%  (2290 s)
+  sub-25 seed 1: source val 70.0%  zero-shot 56.7%  k=30 57.5%  (2320 s)
+  sub-25 seed 2: source val 74.0%  zero-shot 54.6%  k=30 55.8%  (2348 s)
+  sub-25 seed 3: source val 72.0%  zero-shot 57.9%  k=30 55.8%  (2377 s)
+  sub-25 seed 4: source val 69.3%  zero-shot 60.4%  k=30 52.5%  (2405 s)
+  sub-28 seed 0: source val 69.3%  zero-shot 62.1%  k=30 nan%  (2424 s)
+  sub-28 seed 1: source val 74.2%  zero-shot 43.8%  k=30 nan%  (2446 s)
+  sub-28 seed 2: source val 69.0%  zero-shot 62.5%  k=30 nan%  (2465 s)
+  sub-28 seed 3: source val 70.6%  zero-shot 68.3%  k=30 nan%  (2485 s)
+  sub-28 seed 4: source val 74.2%  zero-shot 59.6%  k=30 nan%  (2509 s)
+  sub-29 seed 0: source val 71.4%  zero-shot 40.8%  k=30 nan%  (2524 s)
+  sub-29 seed 1: source val 72.1%  zero-shot 32.9%  k=30 nan%  (2536 s)
+  sub-29 seed 2: source val 73.4%  zero-shot 53.3%  k=30 nan%  (2548 s)
+  sub-29 seed 3: source val 72.7%  zero-shot 53.3%  k=30 nan%  (2559 s)
+  sub-29 seed 4: source val 70.8%  zero-shot 40.4%  k=30 nan%  (2570 s)
+  sub-30 seed 0: source val 69.7%  zero-shot 79.2%  k=30 82.5%  (2597 s)
+  sub-30 seed 1: source val 69.0%  zero-shot 68.3%  k=30 79.6%  (2620 s)
+  sub-30 seed 2: source val 68.7%  zero-shot 63.7%  k=30 79.2%  (2644 s)
+  sub-30 seed 3: source val 68.7%  zero-shot 76.7%  k=30 80.8%  (2667 s)
+  sub-30 seed 4: source val 69.0%  zero-shot 79.2%  k=30 80.8%  (2690 s)
+  sub-31 seed 0: source val 68.3%  zero-shot 60.0%  k=30 72.5%  (2723 s)
+  sub-31 seed 1: source val 70.7%  zero-shot 70.4%  k=30 70.8%  (2757 s)
+  sub-31 seed 2: source val 73.7%  zero-shot 67.5%  k=30 68.8%  (2788 s)
+  sub-31 seed 3: source val 72.0%  zero-shot 65.0%  k=30 70.4%  (2812 s)
+  sub-31 seed 4: source val 71.7%  zero-shot 67.5%  k=30 69.6%  (2837 s)
+  sub-32 seed 0: source val 68.7%  zero-shot 62.9%  k=30 59.2%  (2854 s)
+  sub-32 seed 1: source val 72.0%  zero-shot 58.3%  k=30 60.4%  (2871 s)
+  sub-32 seed 2: source val 72.3%  zero-shot 53.7%  k=30 58.3%  (2888 s)
+  sub-32 seed 3: source val 70.0%  zero-shot 68.3%  k=30 62.9%  (2905 s)
+  sub-32 seed 4: source val 71.3%  zero-shot 64.2%  k=30 60.4%  (2922 s)
+  sub-33 seed 0: source val 64.9%  zero-shot 67.5%  k=30 72.5%  (2946 s)
+  sub-33 seed 1: source val 66.2%  zero-shot 64.6%  k=30 75.8%  (2969 s)
+  sub-33 seed 2: source val 72.8%  zero-shot 68.3%  k=30 75.4%  (2992 s)
+  sub-33 seed 3: source val 68.9%  zero-shot 72.1%  k=30 73.3%  (3015 s)
+  sub-33 seed 4: source val 73.8%  zero-shot 57.9%  k=30 70.0%  (3038 s)
+  sub-34 seed 0: source val 70.3%  zero-shot 82.5%  k=30 85.0%  (3067 s)
+  sub-34 seed 1: source val 68.0%  zero-shot 82.9%  k=30 83.3%  (3098 s)
+  sub-34 seed 2: source val 73.3%  zero-shot 85.8%  k=30 86.7%  (3127 s)
+  sub-34 seed 3: source val 70.7%  zero-shot 80.0%  k=30 83.8%  (3157 s)
+  sub-34 seed 4: source val 67.7%  zero-shot 71.7%  k=30 83.3%  (3191 s)
+  sub-35 seed 0: source val 71.7%  zero-shot 72.9%  k=30 65.8%  (3232 s)
+  sub-35 seed 1: source val 71.0%  zero-shot 54.6%  k=30 60.8%  (3275 s)
+  sub-35 seed 2: source val 70.0%  zero-shot 59.6%  k=30 68.3%  (3315 s)
+  sub-35 seed 3: source val 66.7%  zero-shot 59.6%  k=30 57.5%  (3357 s)
+  sub-35 seed 4: source val 69.7%  zero-shot 62.5%  k=30 56.7%  (3398 s)
+  sub-39 seed 0: source val 69.5%  zero-shot 57.1%  k=30 55.8%  (3451 s)
+  sub-39 seed 1: source val 71.2%  zero-shot 48.8%  k=30 54.2%  (3502 s)
+  sub-39 seed 2: source val 73.8%  zero-shot 58.7%  k=30 54.2%  (3553 s)
+  sub-39 seed 3: source val 68.9%  zero-shot 64.6%  k=30 54.2%  (3604 s)
+  sub-39 seed 4: source val 67.9%  zero-shot 55.0%  k=30 53.8%  (3656 s)
+  sub-41 seed 0: source val 67.9%  zero-shot 78.7%  k=30 85.4%  (3681 s)
+  sub-41 seed 1: source val 70.5%  zero-shot 80.4%  k=30 85.4%  (3708 s)
+  sub-41 seed 2: source val 68.9%  zero-shot 86.2%  k=30 87.5%  (3732 s)
+  sub-41 seed 3: source val 68.9%  zero-shot 77.9%  k=30 90.4%  (3756 s)
+  sub-41 seed 4: source val 71.5%  zero-shot 81.7%  k=30 87.1%  (3780 s)
+  sub-44 seed 0: source val 72.2%  zero-shot 40.8%  k=30 59.6%  (3811 s)
+  sub-44 seed 1: source val 73.5%  zero-shot 48.3%  k=30 62.1%  (3840 s)
+  sub-44 seed 2: source val 70.5%  zero-shot 51.3%  k=30 57.5%  (3870 s)
+  sub-44 seed 3: source val 69.9%  zero-shot 45.4%  k=30 54.2%  (3901 s)
+  sub-44 seed 4: source val 72.8%  zero-shot 53.3%  k=30 62.9%  (3931 s)
+  sub-46 seed 0: source val 69.3%  zero-shot 73.8%  k=30 73.8%  (3982 s)
+  sub-46 seed 1: source val 71.0%  zero-shot 74.6%  k=30 72.1%  (4033 s)
+  sub-46 seed 2: source val 69.3%  zero-shot 69.2%  k=30 71.7%  (4085 s)
+  sub-46 seed 3: source val 71.3%  zero-shot 75.0%  k=30 67.5%  (4136 s)
+  sub-46 seed 4: source val 71.3%  zero-shot 69.2%  k=30 72.5%  (4189 s)
+  sub-47 seed 0: source val 68.0%  zero-shot 70.8%  k=30 88.3%  (4240 s)
+  sub-47 seed 1: source val 68.0%  zero-shot 73.3%  k=30 84.2%  (4291 s)
+  sub-47 seed 2: source val 68.0%  zero-shot 82.1%  k=30 86.2%  (4344 s)
+  sub-47 seed 3: source val 70.3%  zero-shot 78.3%  k=30 86.2%  (4396 s)
+  sub-47 seed 4: source val 70.3%  zero-shot 80.0%  k=30 84.6%  (4448 s)
+
+headline curve: subjects supporting every k <= 30: 24/29  (excluded: sub-23, sub-24, sub-28, sub-29, sub-41)
+
+   k   n               within_lr            within_lda                pooled            pooled_bal        pooled_calnorm           zero_nonorm         deep_finetune
+   0  24                      --                    --    66.5 [62.1, 70.9]    66.5 [62.1, 70.9]                    --    57.7 [53.9, 61.8]    63.9 [59.8, 68.2]
+   4  24      55.9 [53.2, 58.7]    50.4 [49.2, 51.6]    67.2 [62.6, 71.8]    67.9 [62.8, 73.0]    60.9 [57.1, 64.9]                    --    61.8 [58.3, 65.6]
+   8  24      59.6 [56.2, 63.3]    60.2 [56.5, 64.2]    67.7 [62.7, 72.5]    68.9 [63.6, 74.1]    65.7 [61.0, 70.4]                    --    63.5 [59.7, 67.6]
+  14  24      63.7 [59.7, 68.0]    65.2 [60.7, 69.9]    68.4 [63.0, 73.6]    70.2 [64.8, 75.3]    68.2 [62.9, 73.4]                    --    65.7 [61.4, 70.2]
+  20  24      66.4 [61.5, 71.4]    67.6 [62.4, 73.1]    69.3 [64.0, 74.4]    71.3 [65.9, 76.8]    69.8 [64.5, 75.3]                    --    67.8 [63.0, 72.8]
+  26  24      68.9 [63.6, 74.4]    70.4 [65.0, 76.2]    69.7 [64.3, 75.0]    72.0 [66.5, 77.6]    71.3 [65.7, 76.8]                    --    68.9 [64.0, 74.0]
+  34  18      71.9 [65.4, 78.3]    72.3 [65.6, 79.2]    69.9 [64.0, 75.9]    72.5 [66.1, 79.1]    72.4 [65.8, 79.1]                    --    70.2 [64.2, 76.4]   <- all subjects still supporting this k
+  40   8      72.1 [63.0, 82.4]    73.1 [63.3, 83.9]    71.6 [61.0, 81.8]    74.4 [62.8, 85.9]    73.7 [62.6, 85.1]                    --    72.1 [62.7, 81.7]   <- all subjects still supporting this k
+
+paired comparisons on the headline subjects (Wilcoxon, two-sided):
+  k=  4: pooled_bal - within_lr = +12.1 pp (p = 0.0001);  calnorm - pooled_bal =  -7.0 pp (p = 0.0001)
+  k=  8: pooled_bal - within_lr =  +9.3 pp (p = 0.0001);  calnorm - pooled_bal =  -3.2 pp (p = 0.0002)
+  k= 14: pooled_bal - within_lr =  +6.5 pp (p = 0.0012);  calnorm - pooled_bal =  -2.0 pp (p = 0.0010)
+  k= 20: pooled_bal - within_lr =  +5.0 pp (p = 0.0061);  calnorm - pooled_bal =  -1.5 pp (p = 0.0010)
+  k= 26: pooled_bal - within_lr =  +3.2 pp (p = 0.0537);  calnorm - pooled_bal =  -0.8 pp (p = 0.0553)
+  k=  0: per-subject z-score vs none:  +8.7 pp (p = 0.0004), zero-shot without it 56.7%
+
+per-subject, pooled_bal (mean over 20 draws):
+  subject       k=0     k=4     k=8    k=14    k=20    k=26    k=34    k=40
+  sub-01       66.7    67.5    68.8    69.6    71.2    71.2    70.8      --
+  sub-02       70.4    74.6    77.5    80.4    83.8    86.7    89.2      --
+  sub-03       52.1    50.4    54.6    55.4    55.0    51.7    53.3    52.9
+  sub-04       53.3    50.0    49.2    52.1    50.8    52.1    50.4      --
+  sub-05       63.3    59.6    57.1    56.3    58.7    62.9    60.0      --
+  sub-10       88.8    92.9    92.1    92.1    93.8    93.3      --      --
+  sub-12       62.9    62.5    62.5    66.3    65.4    65.4    69.2      --
+  sub-13       69.6    71.2    73.8    78.8    80.8    82.1    83.3    87.5
+  sub-14       58.8    56.7    56.7    55.0    61.3    61.3    58.8    55.4
+  sub-15       66.2    68.8    69.6    71.7    71.7    70.4    71.2    72.1
+  sub-18       70.4    74.6    80.0    79.6    82.5    83.8    85.0      --
+  sub-20       68.7    70.0    73.3    75.0    73.3    72.9      --      --
+  sub-22       52.5    57.5    55.8    59.6    61.7    62.1    60.0      --
+  sub-23       60.0    58.7    54.6    52.1      --      --      --      --
+  sub-24       54.6    55.0      --      --      --      --      --      --
+  sub-25       52.5    53.3    53.8    53.3    53.3    52.5      --      --
+  sub-28       56.7    55.4    55.8    56.7      --      --      --      --
+  sub-29       44.6    47.1    49.2      --      --      --      --      --
+  sub-30       76.7    78.8    80.0    80.0    80.4    81.7      --      --
+  sub-31       67.1    70.8    70.8    69.6    71.7    74.6    76.2      --
+  sub-32       76.7    71.7    73.8    74.2    72.9    77.1      --      --
+  sub-33       79.6    85.4    85.4    87.1    89.6    90.8    91.2      --
+  sub-34       87.9    89.2    89.2    90.4    92.1    92.5    93.8    94.6
+  sub-35       60.0    60.4    62.1    62.9    61.2    60.4    62.5      --
+  sub-39       51.2    49.6    50.0    50.8    50.8    55.0    57.5    56.7
+  sub-41       86.2    88.3    87.5    88.3    89.2      --      --      --
+  sub-44       52.5    54.2    54.6    56.2    59.6    59.6      --      --
+  sub-46       73.8    75.8    76.2    78.8    78.3    75.0    77.9    77.9
+  sub-47       74.6    85.0    87.9    89.2    92.1    94.2    95.0    97.9
+wrote diagnostics/calib-overt-lateral.log, .png, -summary.json

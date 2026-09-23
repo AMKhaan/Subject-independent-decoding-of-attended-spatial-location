@@ -1,0 +1,46 @@
+task: lateral   chance = 50.0%   correct trials only
+29 subjects, 1566 trials, 2220 features (6 time bins x 370 channels)
+
+=== within-subject 5-fold CV (5 repeats) -- comparable to Ning et al. ===
+  LDA (Ledoit-Wolf)    mean 72.48%   sd 15.75   range 38.80-96.39   above chance: 28/29
+  Logistic (L2)        mean 71.59%   sd 15.46   range 39.40-96.00   above chance: 28/29
+  SVM (RBF)            mean 66.40%   sd 11.50   range 48.40-91.33   above chance: 28/29
+  Random Forest        mean 71.82%   sd 15.16   range 40.60-100.00   above chance: 28/29
+
+=== leave-one-subject-out -- tests generalisation to a new person ===
+  LDA (Ledoit-Wolf)    mean 62.20%   sd 10.93   range 42.31-87.04   above chance: 24/29
+  Logistic (L2)        mean 64.91%   sd 10.92   range 42.31-88.33   above chance: 28/29
+  SVM (RBF)            mean 65.71%   sd 15.12   range 36.36-95.00   above chance: 24/29
+  Random Forest        mean 62.52%   sd 15.07   range 30.00-88.33   above chance: 22/29
+
+=== per-subject accuracy, best model in each protocol ===
+  subject   within (LDA (Ledoit-Wolf)) LOSO (SVM (RBF))
+  sub-01                    77.48%         62.71%
+  sub-02                    88.36%         76.36%
+  sub-03                    57.67%         48.33%
+  sub-04                    59.20%         40.38%
+  sub-05                    54.97%         62.50%
+  sub-10                    94.11%         94.44%
+  sub-12                    84.39%         57.63%
+  sub-13                    83.39%         52.54%
+  sub-14                    62.03%         65.52%
+  sub-15                    66.30%         64.91%
+  sub-18                    96.39%         87.50%
+  sub-20                    78.24%         77.19%
+  sub-22                    68.64%         61.02%
+  sub-23                    53.00%         40.00%
+  sub-24                    38.80%         36.36%
+  sub-25                    56.58%         54.24%
+  sub-28                    62.79%         71.05%
+  sub-29                    52.53%         50.00%
+  sub-30                    88.42%         77.97%
+  sub-31                    77.42%         67.80%
+  sub-32                    65.00%         70.00%
+  sub-33                    89.85%         75.86%
+  sub-34                    96.33%         95.00%
+  sub-35                    65.00%         68.33%
+  sub-39                    54.76%         56.90%
+  sub-41                    92.58%         84.31%
+  sub-44                    75.30%         55.36%
+  sub-46                    68.33%         70.00%
+  sub-47                    93.91%         81.36%

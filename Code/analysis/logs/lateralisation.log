@@ -1,0 +1,27 @@
+$ python -u lateralisation.py --perms 5000
+
+28 channels: 14 left hemisphere, 14 right, 0 midline
+averaging HbO over 2-10 s after Trigger3, 81 samples
+
+  sub-08   LI = +0.3482 uM   permutation p = 0.510   
+  sub-12   LI = -1.3791 uM   permutation p = 0.596   
+  sub-13   LI = +0.1744 uM   permutation p = 0.759   
+  sub-14   LI = -0.0965 uM   permutation p = 0.893   
+  sub-15   LI = +0.6522 uM   permutation p = 0.048   *
+  sub-16   LI = -3.3589 uM   permutation p = 0.046   *
+  sub-19   LI = -0.0969 uM   permutation p = 0.970   
+  sub-21   LI = -1.0803 uM   permutation p = 0.575   
+  sub-22   LI = -0.0885 uM   permutation p = 0.884   
+  sub-23   LI = +0.3560 uM   permutation p = 0.855   
+  sub-24   LI = -0.4683 uM   permutation p = 0.419   
+  sub-25   LI = +0.1675 uM   permutation p = 0.831   
+
+=== group ===
+  mean LI = -0.4058 uM   permutation p = 0.3280   (5000 within-subject label permutations)
+  null distribution: mean +0.0008, sd 0.4125
+  subjects with LI of the group sign: 7/12
+
+=== interpretation ===
+  No reliable lateralisation. Either the effect is too small for a
+  channel-average contrast, or it is not present in these labels.
+  The left/right assignment of labels 1 and 2 stays undetermined.

@@ -1,0 +1,35 @@
+task: 3class   chance = 33.3%   correct trials only
+12 subjects, 907 trials, 336 features (6 time bins x 56 channels)
+
+=== within-subject 5-fold CV (5 repeats) -- comparable to Ning et al. ===
+  LDA (Ledoit-Wolf)    mean 57.32%   sd 19.15   range 28.86-83.78   above chance: 9/12
+  Logistic (L2)        mean 56.93%   sd 19.31   range 29.14-82.84   above chance: 9/12
+  SVM (RBF)            mean 54.51%   sd 15.12   range 24.86-82.40   above chance: 11/12
+  Random Forest        mean 58.64%   sd 19.81   range 27.14-90.03   above chance: 10/12
+
+=== leave-one-subject-out -- tests generalisation to a new person ===
+  LDA (Ledoit-Wolf)    mean 43.49%   sd 9.52   range 24.29-59.04   above chance: 10/12
+  Logistic (L2)        mean 44.20%   sd 9.77   range 28.57-60.24   above chance: 10/12
+  SVM (RBF)            mean 41.65%   sd 9.57   range 28.57-59.52   above chance: 9/12
+  Random Forest        mean 41.84%   sd 11.63   range 22.54-56.47   above chance: 7/12
+
+=== per-subject accuracy, best model in each protocol ===
+  subject   within (Random Forest)     LOSO (Logistic (L2))
+  sub-08                    72.40%         60.24%
+  sub-12                    90.03%         38.10%
+  sub-13                    50.78%         36.78%
+  sub-14                    27.14%         28.57%
+  sub-15                    48.55%         43.94%
+  sub-16                    73.41%         55.29%
+  sub-19                    87.91%         43.68%
+  sub-21                    59.18%         50.68%
+  sub-22                    54.04%         45.07%
+  sub-23                    40.86%         38.03%
+  sub-24                    69.73%         58.14%
+  sub-25                    29.61%         31.82%
+
+=== label permutation, 200 permutations ===
+  within / Random Forest: observed 58.64%
+    permutation 200/200                                            null mean 34.51%  sd 1.75  95th pct 37.32%  ->  p = 0.0050 (floor, p < 0.0050)  significant
+  loso / Logistic (L2): observed 44.20%
+    permutation 20/200    permutation 40/200    permutation 60/200    permutation 80/200    permutation 100/200    permutation 120/200    permutation 140/200    permutation 160/200    permutation 180/200    permutation 200/200                                            null mean 33.41%  sd 1.98  95th pct 36.46%  ->  p = 0.0050 (floor, p < 0.0050)  significant

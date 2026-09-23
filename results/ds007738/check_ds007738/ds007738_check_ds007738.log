@@ -1,0 +1,30 @@
+ds007738 gate checks
+
+participants.tsv: 38 subjects, columns: participant_id only (no demographics, so overlap with ds004830 cannot be checked from files)
+README: fNIRS: 56 sources, 144 detectors, 1134 measurement channels at ~8.99 Hz.
+
+task inventory (events.tsv across all subjects):
+  covert            30 subjects, 60 runs
+  longvisualorient   8 subjects, 24 runs
+  overt             30 subjects, 59 runs
+  resting           23 subjects, 23 runs
+  videoattend        8 subjects, 24 runs
+  visualorient      30 subjects, 30 runs
+  overt: trial types in first 6 subjects' run-01 = {'Overt Left': 101, 'Overt Right': 78}; 166/179 flagged include=1; columns: ['onset', 'duration', 'value', 'trial_type', 'response_correct', 'gaze_ok', 'include']
+  covert: trial types in first 6 subjects' run-01 = {'Covert Left': 89, 'Covert Right': 90}; 154/179 flagged include=1; columns: ['onset', 'duration', 'value', 'trial_type', 'response_correct', 'gaze_ok', 'include']
+  -> two classes (Left / Right) only: ds007738 can replicate the lateral
+     (2-class) result, not the 3-class one.
+
+/nirs/probe in the resting-state SNIRF of: sub-01, sub-02
+  sub-01: fields ['detectorLabels', 'detectorPos2D', 'detectorPos3D', 'landmarkLabels', 'landmarkPos2D', 'landmarkPos3D', 'sourceLabels', 'sourcePos2D', 'sourcePos3D', 'wavelengths']
+      sources (56, 3), detectors (144, 3), landmarks (329, 3) (first: ['Nz', 'Iz', 'RPA', 'LPA', 'Cz'])
+  sub-02: fields ['detectorLabels', 'detectorPos2D', 'detectorPos3D', 'landmarkLabels', 'landmarkPos2D', 'landmarkPos3D', 'sourceLabels', 'sourcePos2D', 'sourcePos3D', 'wavelengths']
+      sources (56, 3), detectors (144, 3), landmarks (329, 3) (first: ['Nz', 'Iz', 'RPA', 'LPA', 'Cz'])
+  sourcePos3D: max |sub-01 - sub-02| = 0.0000 mm
+  detectorPos3D: max |sub-01 - sub-02| = 0.0000 mm
+  landmarkPos3D: max |sub-01 - sub-02| = 0.0000 mm
+  -> gate 1: 3-D coordinates PRESENT with 10-5 landmarks, but IDENTICAL across subjects: an atlas template, not digitised per head.
+     Anatomical ROI labelling is possible; per-subject registration is not.
+  -> gate 2 (participant overlap with ds004830): OPEN. Needs the authors.
+
+wrote diagnostics/ds007738.log, ds007738.png

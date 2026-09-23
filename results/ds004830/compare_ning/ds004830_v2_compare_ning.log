@@ -1,0 +1,49 @@
+check: Ning et al. lateral mean over their 11 included = 78.27%
+check: Ning et al. 3class mean over their 11 included = 49.36%
+their included subjects: sub-08, sub-12, sub-13, sub-14, sub-15, sub-16, sub-19, sub-21, sub-22, sub-23, sub-24
+
+=== 3class, within-subject, their 11 subjects, correct trials ===
+  Ning et al. (shrinkage LDA, HbT GLM-AUC 0-5 s): mean 49.36%
+  ours, LDA (Ledoit-Wolf) (same classifier (primary)): mean 59.67%
+    difference ours - theirs: +10.30 pp, 95% CI [+0.3, +20.3], Wilcoxon p = 0.1475, better in 6/11
+    per-subject agreement: Spearman rho = +0.397, p = 0.2263
+  ours, Random Forest (our best, selected on these data): mean 61.23%
+    difference ours - theirs: +11.86 pp, 95% CI [+1.8, +22.3], Wilcoxon p = 0.0674, better in 9/11
+    per-subject agreement: Spearman rho = +0.447, p = 0.1676
+  subject    Ning  ours LDA  ours RF
+  sub-08     67.0      73.7     71.9
+  sub-12     84.0      83.8     90.0
+  sub-13     33.0      62.1     51.3
+  sub-14     46.0      28.9     27.1
+  sub-15     35.0      31.4     48.5
+  sub-16     62.0      79.8     73.2
+  sub-19     42.0      76.6     87.9
+  sub-21     55.0      50.2     59.2
+  sub-22     40.0      60.5     54.0
+  sub-23     46.0      42.4     40.6
+  sub-24     33.0      67.0     69.7
+
+=== lateral, within-subject, their 11 subjects, correct trials ===
+  Ning et al. (shrinkage LDA, HbT GLM-AUC 0-5 s): mean 78.27%
+  ours, LDA (Ledoit-Wolf) (same classifier (primary)): mean 78.27%
+    difference ours - theirs: -0.00 pp, 95% CI [-6.2, +6.7], Wilcoxon p = 0.8984, better in 6/11
+    per-subject agreement: Spearman rho = +0.807, p = 0.0027
+  ours, Random Forest (our best, selected on these data): mean 80.65%
+    difference ours - theirs: +2.38 pp, 95% CI [-2.9, +7.2], Wilcoxon p = 0.3203, better in 7/11
+    per-subject agreement: Spearman rho = +0.789, p = 0.0039
+  subject    Ning  ours LDA  ours RF
+  sub-08     95.0      93.5     93.3
+  sub-12     92.0      96.0     92.2
+  sub-13     60.0      84.1     74.4
+  sub-14     66.0      48.4     49.3
+  sub-15     55.0      44.4     61.8
+  sub-16     92.0      92.1     92.5
+  sub-19     83.0      93.1     98.6
+  sub-21     86.0      75.0     88.4
+  sub-22     75.0      81.8     80.4
+  sub-23     65.0      59.6     64.9
+  sub-24     92.0      93.1     91.4
+
+reading: a positive, significant Spearman rho means both pipelines rank the same
+subjects as decodable; a difference CI spanning 0 means we match, not beat, them.
+wrote diagnostics/compare-ning.log, compare-ning.png

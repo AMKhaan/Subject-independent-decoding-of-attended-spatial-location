@@ -1,0 +1,10 @@
+{
+  "group_recovery_rf": 0.7076062639821029,
+  "label_rf": 0.7927772451262384,
+  "label_logistic": 0.4939277724512624,
+  "group_to_label_deterministic": true,
+  "oracle_ceiling": 1.0,
+  "majority_class": 0.45691638967016107,
+  "n_windows": 31288,
+  "n_groups": 24
+}

@@ -1,0 +1,40 @@
+12 subjects, 1056 trials
+2 s window, 0.5 s step, shrinkage LDA, within-subject 5-fold x3
+
+=== group accuracy by window centre ===
+   centre (s)   accuracy     sem
+        -1.00     32.83%   1.30  <-- pre-onset
+        -0.50     35.94%   2.17  <-- pre-onset
+         0.00     38.07%   3.20
+         0.50     43.42%   4.45
+         1.00     46.50%   4.96
+         1.50     48.78%   5.07
+         2.00     50.75%   5.23
+         2.50     53.73%   5.13
+         3.00     56.72%   4.98
+         3.50     58.76%   5.45
+         4.00     59.90%   5.58
+         4.50     60.22%   5.68
+         5.00     60.55%   5.75
+         5.50     60.85%   5.57
+         6.00     61.31%   5.47
+         6.50     60.38%   5.54
+         7.00     58.15%   5.51
+         7.50     56.16%   5.51
+         8.00     53.90%   5.24
+         8.50     52.34%   4.85
+         9.00     52.81%   4.70
+         9.50     52.32%   4.71
+        10.00     51.07%   4.38
+        10.50     49.12%   4.33
+        11.00     47.89%   4.65
+
+  mean over pre-onset windows   34.38%
+  mean over 2-10 s windows      56.47%
+  peak 61.31% at +6.00 s
+
+=== permutation envelope, 200 permutations ===
+    20/200    40/200    60/200    80/200    100/200    120/200    140/200    160/200    180/200    200/200                                null mean 33.25%   family-wise 95% threshold 37.64%
+  windows above threshold: +0.00 to +11.00 s (23 of 25)
+
+wrote diagnostics/fig_time_resolved_v2.png

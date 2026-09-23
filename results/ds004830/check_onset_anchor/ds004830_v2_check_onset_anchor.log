@@ -1,0 +1,52 @@
+which event do the official v2.0.0 onsets mark?
+
+1. inter-onset intervals, official vs PsychToolbox triggers (within run, no clock)
+   subject     n  |dIOI| T1  |dIOI| T2  |dIOI| T3  T3-T2 sd  T3-T1 sd   (median abs difference, s)
+   sub-08     13     55.918     55.842     55.852     0.022     0.060
+   sub-12     90      0.025      0.026      0.024     0.023     0.038
+   sub-13     90      0.029      0.025      0.030     0.027     0.036
+   sub-14     90      0.030      0.029      0.031     0.024     0.039
+   sub-15     90      0.025      0.024      0.029     0.025     0.042
+   sub-16     90      0.030      0.028      0.029     0.024     0.028
+   sub-19     90      3.264      3.294      3.311     0.024     0.036
+   sub-21     90      0.029      0.028      0.029     0.026     0.048
+   sub-22     90      0.024      0.024      0.030     0.027     0.034
+   sub-23     90      0.030      0.028      0.036     0.026     0.043
+   sub-24     90      0.024      0.024      0.036     0.020     0.031
+   sub-25     90      0.029      0.030      0.029     0.019     0.036
+   median over subjects: T1 0.029  T2 0.028  T3 0.030 s
+   -> cannot identify the event: T1, T2 and T3 are all locked to one another, so
+      their intervals are the same. Subjects with |dIOI| >> 0.1 s (sub-08, sub-19)
+      are timing anomalies between the official file and the PsychToolbox clock,
+      not evidence about the anchor.
+
+2. grand-average HbO locked to the official onset (all trials, all channels)
+   sub-08   peak HbO at  +4.7 s
+   sub-12   peak HbO at  +3.3 s
+   sub-13   peak HbO at  +0.0 s
+   sub-14   peak HbO at  +4.7 s
+   sub-15   peak HbO at  +3.9 s
+   sub-16   peak HbO at  +5.3 s
+   sub-19   peak HbO at  +2.1 s
+   sub-21   peak HbO at  +2.5 s
+   sub-22   peak HbO at  +9.7 s
+   sub-23   peak HbO at  +3.5 s
+   sub-24   peak HbO at  +2.0 s
+   sub-25   peak HbO at  +3.1 s
+   grand average peak: +3.4 s;  per-subject median +3.4 s (IQR +2.4 to +4.7)
+   -> peak at +3.4 s is too early to be a response to an event at 0, and
+      fits a response to the cue at -3.19 s: FAVOURS onset = MOVIE
+   caveat: the epoch ends at +12 s and peak latency varies by region and person;
+   this is supporting evidence, weighed with test 1, not proof.
+
+3. reproduction of Ning et al.'s published accuracy with their own pipeline
+   onset = cue   3class:  53.14%  (published 49.4%, gap +3.74)
+   onset = cue   2class:  75.23%  (published 78.3%, gap -3.07)
+   onset = movie 3class:  37.04%  (published 49.4%, gap -12.36)
+   onset = movie 2class:  55.42%  (published 78.3%, gap -22.88)
+   -> total |gap|: cue 6.8 pp, movie 35.2 pp: their published result is reproduced only if onset = CUE.
+   VERDICT (weighting test 3 over test 2): the official onset marks the CUE.
+   Test 2's early peak is then a fast response to the cue itself, not a response to
+   an earlier event; test 2 alone was misread as favouring the movie.
+
+wrote diagnostics/onset-anchor.log, onset-anchor.png

@@ -1,0 +1,15 @@
+# Versions the reported numbers were produced on (Python 3.11.9, Windows, CPU only).
+#
+# These are pins for reproducing the paper, not lower bounds: the code uses nothing
+# exotic and will run on a range of nearby versions. Exact agreement in the last
+# decimal place across BLAS builds or scikit-learn releases is not guaranteed, and no
+# conclusion in the paper depends on a digit that fine.
+#
+# Install PyTorch from the CPU index if you do not want the CUDA wheels:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+numpy==2.4.6
+scipy==1.17.1
+scikit-learn==1.9.0
+torch==2.13.0
+matplotlib==3.11.1

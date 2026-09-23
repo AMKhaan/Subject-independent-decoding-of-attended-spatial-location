@@ -1,0 +1,30 @@
+﻿task: 3class   chance = 33.3%
+12 subjects, 1079 trials, 336 features (6 time bins x 56 channels)
+
+=== within-subject 5-fold CV (5 repeats) -- comparable to Ning et al. ===
+  LDA (Ledoit-Wolf)    mean 39.81%   sd 8.86   range 30.00-57.11   above chance: 8/12
+  Logistic (L2)        mean 40.06%   sd 8.68   range 30.00-55.33   above chance: 8/12
+  SVM (RBF)            mean 36.50%   sd 9.02   range 25.56-58.89   above chance: 6/12
+  Random Forest        mean 38.96%   sd 9.56   range 28.89-56.22   above chance: 7/12
+
+=== leave-one-subject-out -- tests generalisation to a new person ===
+  LDA (Ledoit-Wolf)    mean 31.98%   sd 3.00   range 26.67-37.78   above chance: 4/12
+  Logistic (L2)        mean 32.72%   sd 2.97   range 27.78-37.08   above chance: 5/12
+  SVM (RBF)            mean 32.34%   sd 4.46   range 24.44-42.22   above chance: 4/12
+  Random Forest        mean 33.09%   sd 4.91   range 24.44-40.00   above chance: 7/12
+
+=== per-subject accuracy, best model in each protocol ===
+  subject   within (Logistic (L2))     LOSO (Random Forest)
+  sub-08                    36.22%         30.00%
+  sub-12                    42.22%         33.33%
+  sub-13                    43.56%         35.56%
+  sub-14                    30.22%         37.78%
+  sub-15                    36.48%         33.71%
+  sub-16                    49.11%         24.44%
+  sub-19                    38.89%         40.00%
+  sub-21                    54.67%         28.89%
+  sub-22                    30.00%         34.44%
+  sub-23                    31.33%         37.78%
+  sub-24                    55.33%         36.67%
+  sub-25                    32.67%         24.44%
+wall time: 9.4 min

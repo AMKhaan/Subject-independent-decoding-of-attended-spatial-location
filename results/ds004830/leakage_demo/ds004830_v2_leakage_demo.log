@@ -1,0 +1,19 @@
+running protocols (same data, same classifier, same features)...
+
+  A   43.65%   leave-one-subject-out
+      12 folds, one per held-out subject
+  B   50.09%   random split over trials, subjects pooled
+      1079 trials pooled, 5 random 80/20 splits
+  C   56.02%   random split over sliding windows
+      18343 windows (4 s, 0.5 s step, ~17 per trial), 5 random 80/20 splits
+  D   79.28%   channel-as-sample with the label bug
+      31288 raw-intensity windows, 2 channels x 12 subjects = 24 channel groups; majority class 45.7% (see oracle_check.py for the mechanism)
+
+=== inflation over the honest protocol ===
+      protocol                                      accuracy      vs A
+  A   leave-one-subject-out                           43.65%          
+  B   random split over trials, subjects pooled       50.09%   +6.4 pp
+  C   random split over sliding windows               56.02%  +12.4 pp
+  D   channel-as-sample with the label bug            79.28%  +35.6 pp
+
+  chance = 33.3%   dataset authors (Ning et al.) report ~45% within-subject

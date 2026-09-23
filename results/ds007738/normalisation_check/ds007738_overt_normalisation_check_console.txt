@@ -1,0 +1,38 @@
+
+##### normalisation_check.py  2026-09-19 05:47  data=D:/fnirs/ds007738/derived/overt  warm-up W=20 trials  primary=causal  deep=True
+
+=== lateral  chance 50.0%  test trials (correct, after the first 20): 999, same for every scheme ===
+  model                           transductive                  prefix                  causal                    none
+  Logistic (L2)             67.15 [62.0, 72.5]      68.58 [63.2, 74.2]      66.91 [61.9, 72.5]      59.63 [54.9, 66.0]
+  LDA (Ledoit-Wolf)         64.60 [60.0, 70.0]      64.78 [59.9, 70.8]      64.11 [58.8, 70.1]      59.71 [55.4, 66.1]
+  Logistic (L2)        prefix   - transductive =  +1.42 pp  (Wilcoxon p = 0.1228)
+  Logistic (L2)        causal   - transductive =  -0.25 pp  (Wilcoxon p = 0.9851)
+  Logistic (L2)        none     - transductive =  -7.53 pp  (Wilcoxon p = 0.0055)
+  LDA (Ledoit-Wolf)    prefix   - transductive =  +0.17 pp  (Wilcoxon p = 0.4924)
+  LDA (Ledoit-Wolf)    causal   - transductive =  -0.50 pp  (Wilcoxon p = 0.9353)
+  LDA (Ledoit-Wolf)    none     - transductive =  -4.89 pp  (Wilcoxon p = 0.0061)
+    permutations 20/200
+    permutations 40/200
+    permutations 60/200
+    permutations 80/200
+    permutations 100/200
+    permutations 120/200
+    permutations 140/200
+    permutations 160/200
+    permutations 180/200
+    permutations 200/200
+  permutation, causal / logistic: observed 66.91%, null mean 49.95%, 95th 53.74%, p = 0.0050  (floor)
+  causal / logistic, per subject: sub-01 59.0%, sub-02 60.0%, sub-03 50.0%, sub-04 53.1%, sub-05 57.9%, sub-10 82.4%*, sub-12 66.7%, sub-13 74.4%*, sub-14 63.2%, sub-15 61.5%, sub-18 78.4%*, sub-20 59.5%, sub-22 60.0%, sub-23 70.0%, sub-24 100.0%, sub-25 51.3%, sub-28 80.0%, sub-29 33.3%, sub-30 85.0%*, sub-31 66.7%, sub-32 62.5%, sub-33 78.9%*, sub-34 80.0%*, sub-35 67.5%, sub-39 47.4%, sub-41 96.9%*, sub-44 50.0%, sub-46 67.5%, sub-47 77.5%*   -> 8/12 significant after Holm
+    deep lateral transductive seed 0: 64.69%  (96 s, cuda)
+    deep lateral transductive seed 1: 63.48%  (95 s, cuda)
+    deep lateral transductive seed 2: 65.18%  (100 s, cuda)
+    deep lateral transductive seed 3: 63.25%  (94 s, cuda)
+    deep lateral transductive seed 4: 64.72%  (97 s, cuda)
+  HemoNet transductive   64.27 +/- 0.76 (sd over 5 seeds)
+    deep lateral causal seed 0: 66.19%  (103 s, cuda)
+    deep lateral causal seed 1: 63.26%  (101 s, cuda)
+    deep lateral causal seed 2: 66.41%  (101 s, cuda)
+    deep lateral causal seed 3: 62.98%  (94 s, cuda)
+    deep lateral causal seed 4: 64.56%  (102 s, cuda)
+  HemoNet causal         64.68 +/- 1.43 (sd over 5 seeds)
+wrote diagnostics/normalisation.log, .png, .json

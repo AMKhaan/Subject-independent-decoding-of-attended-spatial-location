@@ -1,0 +1,40 @@
+physiology -- 12 subjects, 907 correct trials, data D:\fnirs\Extra\Extra\Code\analysis\data_v2
+
+A. group effect maps, 4-8 s, Cohen's d per subject, t-test across subjects, BH-FDR over 56 features
+  Left - Right: features with FDR q < .05: 0/56 (HbO 0, HbR 0);  uncorrected p < .05: 3/56
+    HbO vs HbR group d across channels: Spearman rho +0.252 (p = 0.1952); a negative rho is the expected haemodynamic coupling
+    S2-D2 HbR (L-FEF): mean d -0.55, t -2.80, p 0.0174, q 0.515
+    S2-D1 HbO (L-FEF): mean d +0.23, t +2.77, p 0.0184, q 0.515
+    S9-D14 HbR (L-IPS): mean d -0.46, t -2.25, p 0.0461, q 0.628
+    S4-D10 HbR (R-FEF): mean d +0.41, t +2.13, p 0.0562, q 0.628
+    S10-D13 HbO (R-IPS): mean d -0.33, t -2.11, p 0.0586, q 0.628
+  Centre - lateral: features with FDR q < .05: 1/56 (HbO 0, HbR 1);  uncorrected p < .05: 6/56
+    HbO vs HbR group d across channels: Spearman rho -0.169 (p = 0.3911); a negative rho is the expected haemodynamic coupling
+    S5-D7 HbR (R-FEF): mean d -0.26, t -4.87, p 0.0005, q 0.028
+    S5-D9 HbR (R-FEF): mean d -0.20, t -2.43, p 0.0335, q 0.414
+    S1-D4 HbO (L-FEF): mean d -0.12, t -2.25, p 0.0457, q 0.414
+    S4-D12 HbR (R-FEF): mean d -0.16, t -2.23, p 0.0475, q 0.414
+    S3-D5 HbO (L-FEF): mean d -0.12, t -2.22, p 0.0482, q 0.414
+
+B. region-drop importance (logistic C = 0.1)
+  all 28 channels: within 56.93%   LOSO 44.20%
+  region    n    without: within     LOSO     alone: within     LOSO   (Wilcoxon vs all)
+  L-FEF    10    56.1 ( -0.8, p 0.519)    40.5 ( -3.7, p 0.129)    53.5 ( -3.4, p 0.204)    41.3 ( -2.9, p 0.376)
+  R-FEF    10    53.7 ( -3.2, p 0.052)    40.5 ( -3.7, p 0.230)    53.0 ( -4.0, p 0.204)    41.9 ( -2.3, p 0.206)
+  L-IPS     4    57.0 ( +0.1, p 0.850)    44.7 ( +0.5, p 0.677)    50.6 ( -6.4, p 0.077)    33.9 (-10.3, p 0.012)
+  R-IPS     4    56.5 ( -0.4, p 0.677)    42.1 ( -2.1, p 0.067)    47.2 ( -9.7, p 0.012)    37.4 ( -6.8, p 0.102)
+
+C. Haufe activation patterns, pooled model
+  mean |Haufe pattern| by region (rows) and time bin (cols, s after onset):
+                   0-2     2-4     4-6     6-8    8-10   10-12
+  HbO L-FEF     0.118   0.128   0.125   0.093   0.088   0.101
+  HbO R-FEF     0.090   0.093   0.110   0.082   0.084   0.094
+  HbO L-IPS     0.063   0.076   0.057   0.103   0.109   0.126
+  HbO R-IPS     0.193   0.225   0.230   0.210   0.212   0.210
+  HbR L-FEF     0.157   0.200   0.202   0.166   0.170   0.166
+  HbR R-FEF     0.155   0.199   0.195   0.152   0.123   0.130
+  HbR L-IPS     0.199   0.237   0.266   0.235   0.270   0.228
+  HbR R-IPS     0.111   0.114   0.147   0.124   0.093   0.087
+  time profile (all features): peak bin (4, 6) s; 0.133, 0.157, 0.163, 0.136, 0.132, 0.134
+
+wrote diagnostics/physiology.log, .png, .json

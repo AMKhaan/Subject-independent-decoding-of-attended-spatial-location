@@ -1,0 +1,25 @@
+28 channels: 14 left hemisphere, 14 right, 0 midline
+averaging HbO over 2-10 s after Trigger3, 81 samples
+
+  sub-08   LI = -1.7326 uM   permutation p = 0.000   *
+  sub-12   LI = -9.4001 uM   permutation p = 0.011   *
+  sub-13   LI = +0.3925 uM   permutation p = 0.506   
+  sub-14   LI = -0.3512 uM   permutation p = 0.647   
+  sub-15   LI = +0.1668 uM   permutation p = 0.596   
+  sub-16   LI = +11.9927 uM   permutation p = 0.000   *
+  sub-19   LI = +7.8007 uM   permutation p = 0.256   
+  sub-21   LI = -1.6996 uM   permutation p = 0.383   
+  sub-22   LI = +0.4538 uM   permutation p = 0.417   
+  sub-23   LI = +0.9483 uM   permutation p = 0.337   
+  sub-24   LI = -0.7914 uM   permutation p = 0.108   
+  sub-25   LI = +0.1677 uM   permutation p = 0.820   
+
+=== group ===
+  mean LI = +0.6623 uM   permutation p = 0.3442   (5000 within-subject label permutations)
+  null distribution: mean -0.0076, sd 0.7000
+  subjects with LI of the group sign: 7/12
+
+=== interpretation ===
+  No reliable lateralisation. Either the effect is too small for a
+  channel-average contrast, or it is not present in these labels.
+  The left/right assignment of labels 1 and 2 stays undetermined.

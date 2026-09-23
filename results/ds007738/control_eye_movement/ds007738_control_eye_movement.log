@@ -1,0 +1,48 @@
+eye-movement control: 28 subjects with all of overt, eye, covert (eye = visualorient, eye movements only)
+
+=== normalisation: transductive ===
+  within overt (matched n)        66.90%  [63.3,  70.7]  n=28  vs 50%: Wilcoxon p = 0.0000
+  LOSO overt (matched n)          64.29%  [60.9,  68.3]  n=28  vs 50%: Wilcoxon p = 0.0000
+  LOSO overt (all trials)         65.14%  [61.0,  69.5]  n=28  vs 50%: Wilcoxon p = 0.0000
+  within eye                      71.44%  [66.9,  76.1]  n=28  vs 50%: Wilcoxon p = 0.0000
+  LOSO eye                        71.98%  [66.7,  77.2]  n=28  vs 50%: Wilcoxon p = 0.0000
+  within covert (matched n)       56.74%  [53.5,  60.4]  n=28  vs 50%: Wilcoxon p = 0.0010
+  LOSO covert (matched n)         52.31%  [51.4,  53.5]  n=28  vs 50%: Wilcoxon p = 0.0002
+  LOSO covert (all trials)        51.47%  [48.5,  54.3]  n=28  vs 50%: Wilcoxon p = 0.1507
+  transfer eye -> overt           62.19%  [58.2,  67.1]  n=28  vs 50%: Wilcoxon p = 0.0000
+  transfer overt -> eye           68.79%  [62.3,  74.5]  n=28  vs 50%: Wilcoxon p = 0.0000
+  transfer eye -> covert          49.39%  [47.0,  52.3]  n=28  vs 50%: Wilcoxon p = 0.7193
+  transfer overt -> covert        49.78%  [47.1,  52.2]  n=28  vs 50%: Wilcoxon p = 0.4713
+  transfer covert -> overt        50.61%  [47.6,  54.3]  n=28  vs 50%: Wilcoxon p = 0.5526
+  transfer covert -> eye          48.82%  [44.0,  53.8]  n=28  vs 50%: Wilcoxon p = 0.6667
+  overt - eye movement (within, matched n): -4.55 pp, paired Wilcoxon p = 0.0685
+  overt - eye movement (LOSO, matched n): -7.69 pp, paired Wilcoxon p = 0.0021
+  covert - eye movement (within, matched n): -14.71 pp, paired Wilcoxon p = 0.0001
+  covert - eye movement (LOSO, matched n): -19.66 pp, paired Wilcoxon p = 0.0000
+
+=== normalisation: causal ===
+  within overt (matched n)        66.14%  [62.7,  70.3]  n=28  vs 50%: Wilcoxon p = 0.0000
+  LOSO overt (matched n)          62.89%  [58.9,  67.6]  n=28  vs 50%: Wilcoxon p = 0.0000
+  LOSO overt (all trials)         65.21%  [60.9,  70.1]  n=28  vs 50%: Wilcoxon p = 0.0000
+  within eye                      68.75%  [64.0,  73.6]  n=28  vs 50%: Wilcoxon p = 0.0000
+  LOSO eye                        68.45%  [63.4,  73.8]  n=28  vs 50%: Wilcoxon p = 0.0000
+  within covert (matched n)       55.78%  [52.9,  59.0]  n=28  vs 50%: Wilcoxon p = 0.0014
+  LOSO covert (matched n)         52.84%  [51.4,  54.1]  n=28  vs 50%: Wilcoxon p = 0.0006
+  LOSO covert (all trials)        51.39%  [48.5,  53.9]  n=28  vs 50%: Wilcoxon p = 0.1582
+  transfer eye -> overt           61.99%  [58.7,  66.1]  n=28  vs 50%: Wilcoxon p = 0.0000
+  transfer overt -> eye           69.80%  [63.0,  75.5]  n=28  vs 50%: Wilcoxon p = 0.0000
+  transfer eye -> covert          50.49%  [47.9,  53.6]  n=28  vs 50%: Wilcoxon p = 0.5253
+  transfer overt -> covert        50.13%  [48.1,  52.1]  n=28  vs 50%: Wilcoxon p = 0.4285
+  transfer covert -> overt        50.22%  [46.8,  53.5]  n=28  vs 50%: Wilcoxon p = 0.4728
+  transfer covert -> eye          47.93%  [43.4,  52.8]  n=28  vs 50%: Wilcoxon p = 0.7943
+  overt - eye movement (within, matched n): -2.61 pp, paired Wilcoxon p = 0.3272
+  overt - eye movement (LOSO, matched n): -5.56 pp, paired Wilcoxon p = 0.0296
+  covert - eye movement (within, matched n): -12.97 pp, paired Wilcoxon p = 0.0001
+  covert - eye movement (LOSO, matched n): -15.61 pp, paired Wilcoxon p = 0.0001
+
+reading: if eye-movement-only decoding matches overt decoding, and a model trained
+on eye movements transfers to overt trials, the overt left/right signal is at
+least partly oculomotor. Covert attention (eyes fixed) is the test of attention
+proper: above-chance covert decoding, and no transfer from eye movements to covert
+trials, would mean a left/right attention signal that is not the eye movement.
+wrote diagnostics/control-eye-movement.log, .png, .json

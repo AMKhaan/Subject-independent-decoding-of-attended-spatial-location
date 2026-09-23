@@ -1,0 +1,14 @@
+ONSETS: official v2.0.0 events (diagnostics/events_v2), official onset taken as the cue; cue = onset
+cue-locked (Trigger2) HbT at 10 Hz, DPF=1, motion=targeted PCA, prune=SNR>=1.5
+  sub-08: long=34 short=8 trials=90 pruned=0 acc=92.22% cue->movie=3.2s
+  sub-12: long=20 short=4 trials=90 pruned=10 acc=93.33% cue->movie=3.2s
+  sub-13: long=11 short=4 trials=90 pruned=19 acc=96.67% cue->movie=3.2s
+  sub-14: long=25 short=5 trials=90 pruned=5 acc=77.78% cue->movie=3.2s
+  sub-15: long=30 short=6 trials=90 pruned=0 acc=74.44% cue->movie=3.2s
+  sub-16: long=30 short=6 trials=90 pruned=0 acc=94.44% cue->movie=3.2s
+  sub-19: long=27 short=6 trials=90 pruned=3 acc=96.67% cue->movie=3.2s
+  sub-21: long=30 short=6 trials=90 pruned=0 acc=81.11% cue->movie=3.2s
+  sub-22: long=30 short=6 trials=90 pruned=0 acc=78.89% cue->movie=3.2s
+  sub-23: long=29 short=6 trials=90 pruned=1 acc=78.89% cue->movie=3.2s
+  sub-24: long=29 short=6 trials=90 pruned=1 acc=95.56% cue->movie=3.2s
+  sub-25: long=30 short=5 trials=90 pruned=0 acc=48.89% cue->movie=3.2s  EXCLUDED (behaviour=48.89%)

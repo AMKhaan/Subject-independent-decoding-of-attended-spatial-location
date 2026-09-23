@@ -1,0 +1,7 @@
+$ python -u fig_subjects.py --out manuscript\fig_subjects.png
+
+wrote manuscript\fig_subjects.png
+  within mean 40.80%  sd 7.63  range 28.61-54.24
+  loso   mean 34.32%  sd 4.08  range 28.57-40.28
+  within-vs-LOSO correlation across participants r = -0.2876
+  above chance: within 11/12, LOSO 8/12

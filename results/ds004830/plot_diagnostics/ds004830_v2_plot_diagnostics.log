@@ -1,0 +1,66 @@
+ablation  old <- D:\fnirs\Extra\Extra\Code\analysis\logs\leakage+decode-3class+decode-lateral.log
+          new <- D:\fnirs\Extra\Extra\results\ds004830\leakage_demo\ds004830_v2_leakage_demo.log
+  A  leave-one-subject-out                        misaligned  32.72%   corrected  43.65%
+  B  random split over trials, subjects pooled    misaligned  37.87%   corrected  50.09%
+  C  random split over sliding windows            misaligned  43.25%   corrected  56.02%
+  D  channel-as-sample with the label bug         misaligned  79.28%   corrected  79.28%
+  -> ablation-v2.png
+
+roi <- D:\fnirs\Extra\Extra\results\ds004830\roi_features\ds004830_v2_roi_features.json
+  3class  within|LDA (Ledoit-Wolf)       channel  57.32%  ROI  48.73%  diff  -8.58
+  3class  within|Logistic (L2)           channel  56.93%  ROI  49.42%  diff  -7.51
+  3class  within|SVM (RBF)               channel  54.51%  ROI  47.17%  diff  -7.33
+  3class  within|Random Forest           channel  58.55%  ROI  49.52%  diff  -9.03
+  3class  loso|LDA (Ledoit-Wolf)         channel  43.49%  ROI  41.39%  diff  -2.10
+  3class  loso|Logistic (L2)             channel  44.20%  ROI  40.50%  diff  -3.70
+  3class  loso|SVM (RBF)                 channel  41.65%  ROI  40.42%  diff  -1.23
+  3class  loso|Random Forest             channel  42.00%  ROI  39.66%  diff  -2.34
+  lateral within|LDA (Ledoit-Wolf)       channel  75.55%  ROI  70.57%  diff  -4.98
+  lateral within|Logistic (L2)           channel  76.81%  ROI  70.55%  diff  -6.26
+  lateral within|SVM (RBF)               channel  76.39%  ROI  69.73%  diff  -6.66
+  lateral within|Random Forest           channel  78.67%  ROI  68.56%  diff -10.11
+  lateral loso|LDA (Ledoit-Wolf)         channel  60.81%  ROI  57.82%  diff  -2.99
+  lateral loso|Logistic (L2)             channel  62.17%  ROI  58.23%  diff  -3.93
+  lateral loso|SVM (RBF)                 channel  56.24%  ROI  62.14%  diff  +5.90
+  lateral loso|Random Forest             channel  54.89%  ROI  55.87%  diff  +0.98
+  -> roi-features.png
+
+channels  28 <- D:\fnirs\Extra\Extra\results\ds004830\decode\ds004830_v2_3class_correct_decode.log
+          30 <- D:\fnirs\Extra\Extra\results\ds004830\decode\ds004830_v2_30ch_3class_correct_decode.log
+  within LDA (Ledoit-Wolf)    28ch  57.32%   30ch  58.29%   diff +0.97
+  within Logistic (L2)        28ch  56.93%   30ch  57.43%   diff +0.50
+  within SVM (RBF)            28ch  54.51%   30ch  54.65%   diff +0.14
+  within Random Forest        28ch  58.55%   30ch  57.95%   diff -0.60
+  loso   LDA (Ledoit-Wolf)    28ch  43.49%   30ch  40.88%   diff -2.61
+  loso   Logistic (L2)        28ch  44.20%   30ch  41.02%   diff -3.18
+  loso   SVM (RBF)            28ch  41.65%   30ch  39.84%   diff -1.81
+  loso   Random Forest        28ch  42.00%   30ch  41.43%   diff -0.57
+  permutation (best model): 28ch {'within': ('Random Forest', 0.005), 'loso': ('Logistic (L2)', 0.005)}  30ch {'within': ('LDA (Ledoit-Wolf)', 0.005), 'loso': ('Random Forest', 0.005)}
+  sub-08  within  71.91 ->  76.46   LOSO  60.24 ->  51.81
+  sub-12  within  90.03 ->  84.72   LOSO  38.10 ->  61.90
+  sub-13  within  51.25 ->  62.37   LOSO  36.78 ->  37.93
+  sub-14  within  27.14 ->  29.43   LOSO  28.57 ->  35.71
+  sub-15  within  48.55 ->  38.97   LOSO  43.94 ->  34.85
+  sub-16  within  73.18 ->  78.12   LOSO  55.29 ->  48.24
+  sub-19  within  87.91 ->  76.39   LOSO  43.68 ->  41.38
+  sub-21  within  59.18 ->  51.58   LOSO  50.68 ->  34.25
+  sub-22  within  54.04 ->  56.50   LOSO  45.07 ->  46.48
+  sub-23  within  40.57 ->  44.38   LOSO  38.03 ->  23.94
+  sub-24  within  69.73 ->  67.20   LOSO  58.14 ->  51.16
+  sub-25  within  29.11 ->  33.33   LOSO  31.82 ->  29.55
+  -> channels-28-vs-30.png
+
+ning 3class anchor=movie <- D:\fnirs\Extra\Extra\results\ds004830\ning_decode\ds004830_ning_v2_movie_3class_ning_decode.log
+   included mean by window: 0.1s 34.8, 0.2s 34.8, 0.5s 33.7, 1s 33.8, 1.5s 34.3, 2s 34.6, 3s 34.2, 4s 33.4, 5s 37.0
+   5 s window, their 11 subjects: ours 37.05% vs theirs 49.36%  (diff -12.32, Wilcoxon p = 0.0244; per-subject Spearman rho -0.050, p = 0.8834)
+ning 3class anchor=cue <- D:\fnirs\Extra\Extra\results\ds004830\ning_decode\ds004830_ning_v2_cue_3class_ning_decode.log
+   included mean by window: 0.1s 34.0, 0.2s 34.4, 0.5s 36.3, 1s 41.3, 1.5s 45.9, 2s 47.6, 3s 49.6, 4s 52.0, 5s 53.1
+   5 s window, their 11 subjects: ours 53.15% vs theirs 49.36%  (diff +3.78, Wilcoxon p = 0.5342; per-subject Spearman rho +0.461, p = 0.1534)
+ning 2class anchor=movie <- D:\fnirs\Extra\Extra\results\ds004830\ning_decode\ds004830_ning_v2_movie_2class_ning_decode.log
+   included mean by window: 0.1s 52.5, 0.2s 52.6, 0.5s 53.0, 1s 53.8, 1.5s 54.9, 2s 55.0, 3s 53.0, 4s 52.8, 5s 55.4
+   5 s window, their 11 subjects: ours 55.43% vs theirs 78.27%  (diff -22.85, Wilcoxon p = 0.0020; per-subject Spearman rho +0.119, p = 0.7269)
+ning 2class anchor=cue <- D:\fnirs\Extra\Extra\results\ds004830\ning_decode\ds004830_ning_v2_cue_2class_ning_decode.log
+   included mean by window: 0.1s 52.5, 0.2s 53.7, 0.5s 56.7, 1s 61.5, 1.5s 65.9, 2s 68.5, 3s 70.7, 4s 72.6, 5s 75.2
+   5 s window, their 11 subjects: ours 75.23% vs theirs 78.27%  (diff -3.05, Wilcoxon p = 0.5771; per-subject Spearman rho +0.633, p = 0.0366)
+  -> ning-v2.png
+

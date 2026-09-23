@@ -1,0 +1,242 @@
+12 subjects, 1079 trials, input 56 channels x 140 samples
+chance = 33.3%   max 40 epochs, early stopping on a held-out subject
+
+=== loso ===
+    HemoNet            fold sub-08  32.22%
+    HemoNet            fold sub-12  36.67%
+    HemoNet            fold sub-13  34.44%
+    HemoNet            fold sub-14  40.00%
+    HemoNet            fold sub-15  31.46%
+    HemoNet            fold sub-16  30.00%
+    HemoNet            fold sub-19  34.44%
+    HemoNet            fold sub-21  32.22%
+    HemoNet            fold sub-22  35.56%
+    HemoNet            fold sub-23  25.56%
+    HemoNet            fold sub-24  34.44%
+    HemoNet            fold sub-25  36.67%
+  HemoNet            mean 33.64%  sd 3.56  (113s)
+
+    CNN+BiLSTM         fold sub-08  25.56%
+    CNN+BiLSTM         fold sub-12  31.11%
+    CNN+BiLSTM         fold sub-13  38.89%
+    CNN+BiLSTM         fold sub-14  32.22%
+    CNN+BiLSTM         fold sub-15  33.71%
+    CNN+BiLSTM         fold sub-16  35.56%
+    CNN+BiLSTM         fold sub-19  32.22%
+    CNN+BiLSTM         fold sub-21  32.22%
+    CNN+BiLSTM         fold sub-22  36.67%
+    CNN+BiLSTM         fold sub-23  28.89%
+    CNN+BiLSTM         fold sub-24  35.56%
+    CNN+BiLSTM         fold sub-25  37.78%
+  CNN+BiLSTM         mean 33.36%  sd 3.66  (100s)
+
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        fold sub-08  36.67%
+    Transformer        fold sub-12  31.11%
+    Transformer        fold sub-13  38.89%
+    Transformer        fold sub-14  36.67%
+    Transformer        fold sub-15  28.09%
+    Transformer        fold sub-16  34.44%
+    Transformer        fold sub-19  34.44%
+    Transformer        fold sub-21  30.00%
+    Transformer        fold sub-22  41.11%
+    Transformer        fold sub-23  30.00%
+    Transformer        fold sub-24  33.33%
+    Transformer        fold sub-25  31.11%
+  Transformer        mean 33.82%  sd 3.79  (4683s)
+
+    CNN+TemporalAttn   fold sub-08  30.00%
+    CNN+TemporalAttn   fold sub-12  32.22%
+    CNN+TemporalAttn   fold sub-13  33.33%
+    CNN+TemporalAttn   fold sub-14  36.67%
+    CNN+TemporalAttn   fold sub-15  30.34%
+    CNN+TemporalAttn   fold sub-16  42.22%
+    CNN+TemporalAttn   fold sub-19  32.22%
+    CNN+TemporalAttn   fold sub-21  24.44%
+    CNN+TemporalAttn   fold sub-22  41.11%
+    CNN+TemporalAttn   fold sub-23  32.22%
+    CNN+TemporalAttn   fold sub-24  23.33%
+    CNN+TemporalAttn   fold sub-25  32.22%
+  CNN+TemporalAttn   mean 32.53%  sd 5.38  (170s)
+
+    TCN                fold sub-08  31.11%
+    TCN                fold sub-12  24.44%
+    TCN                fold sub-13  37.78%
+    TCN                fold sub-14  27.78%
+    TCN                fold sub-15  33.71%
+    TCN                fold sub-16  35.56%
+    TCN                fold sub-19  33.33%
+    TCN                fold sub-21  30.00%
+    TCN                fold sub-22  31.11%
+    TCN                fold sub-23  34.44%
+    TCN                fold sub-24  35.56%
+    TCN                fold sub-25  33.33%
+  TCN                mean 32.35%  sd 3.54  (1659s)
+
+    InceptionTime      fold sub-08  30.00%
+    InceptionTime      fold sub-12  38.89%
+    InceptionTime      fold sub-13  31.11%
+    InceptionTime      fold sub-14  35.56%
+    InceptionTime      fold sub-15  28.09%
+    InceptionTime      fold sub-16  30.00%
+    InceptionTime      fold sub-19  36.67%
+    InceptionTime      fold sub-21  28.89%
+    InceptionTime      fold sub-22  34.44%
+    InceptionTime      fold sub-23  30.00%
+    InceptionTime      fold sub-24  32.22%
+    InceptionTime      fold sub-25  33.33%
+  InceptionTime      mean 32.43%  sd 3.23  (4611s)
+
+    GRU+Attention      fold sub-08  35.56%
+    GRU+Attention      fold sub-12  27.78%
+    GRU+Attention      fold sub-13  35.56%
+    GRU+Attention      fold sub-14  36.67%
+    GRU+Attention      fold sub-15  30.34%
+    GRU+Attention      fold sub-16  38.89%
+    GRU+Attention      fold sub-19  38.89%
+    GRU+Attention      fold sub-21  24.44%
+    GRU+Attention      fold sub-22  37.78%
+    GRU+Attention      fold sub-23  26.67%
+    GRU+Attention      fold sub-24  30.00%
+    GRU+Attention      fold sub-25  38.89%
+  GRU+Attention      mean 33.45%  sd 5.06  (1034s)
+
+=== within ===
+    HemoNet            sub-08  40.00%
+    HemoNet            sub-12  38.89%
+    HemoNet            sub-13  41.11%
+    HemoNet            sub-14  33.33%
+    HemoNet            sub-15  39.48%
+    HemoNet            sub-16  37.78%
+    HemoNet            sub-19  26.67%
+    HemoNet            sub-21  48.89%
+    HemoNet            sub-22  31.11%
+    HemoNet            sub-23  23.33%
+    HemoNet            sub-24  37.78%
+    HemoNet            sub-25  25.56%
+  HemoNet            mean 35.33%  sd 7.17  (37s)
+
+    CNN+BiLSTM         sub-08  32.22%
+    CNN+BiLSTM         sub-12  41.11%
+    CNN+BiLSTM         sub-13  37.78%
+    CNN+BiLSTM         sub-14  35.56%
+    CNN+BiLSTM         sub-15  35.95%
+    CNN+BiLSTM         sub-16  34.44%
+    CNN+BiLSTM         sub-19  33.33%
+    CNN+BiLSTM         sub-21  52.22%
+    CNN+BiLSTM         sub-22  33.33%
+    CNN+BiLSTM         sub-23  31.11%
+    CNN+BiLSTM         sub-24  62.22%
+    CNN+BiLSTM         sub-25  35.56%
+  CNN+BiLSTM         mean 38.74%  sd 8.88  (47s)
+
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-08  44.44%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-12  41.11%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-13  44.44%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-14  36.67%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-15  34.97%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-16  38.89%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-19  27.78%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-21  44.44%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-22  38.89%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-23  25.56%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-24  36.67%
+Code\analysis\deep_models.py:80: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.t = nn.TransformerEncoder(enc, layers)
+    Transformer        sub-25  30.00%
+  Transformer        mean 36.99%  sd 6.19  (598s)
+
+    CNN+TemporalAttn   sub-08  35.56%
+    CNN+TemporalAttn   sub-12  50.00%
+    CNN+TemporalAttn   sub-13  36.67%
+    CNN+TemporalAttn   sub-14  34.44%
+    CNN+TemporalAttn   sub-15  40.65%
+    CNN+TemporalAttn   sub-16  36.67%
+    CNN+TemporalAttn   sub-19  32.22%
+    CNN+TemporalAttn   sub-21  45.56%
+    CNN+TemporalAttn   sub-22  31.11%
+    CNN+TemporalAttn   sub-23  23.33%
+    CNN+TemporalAttn   sub-24  37.78%
+    CNN+TemporalAttn   sub-25  26.67%
+  CNN+TemporalAttn   mean 35.89%  sd 7.08  (25s)
+
+    TCN                sub-08  40.00%
+    TCN                sub-12  36.67%
+    TCN                sub-13  43.33%
+    TCN                sub-14  36.67%
+    TCN                sub-15  32.75%
+    TCN                sub-16  37.78%
+    TCN                sub-19  32.22%
+    TCN                sub-21  43.33%
+    TCN                sub-22  27.78%
+    TCN                sub-23  34.44%
+    TCN                sub-24  46.67%
+    TCN                sub-25  31.11%
+  TCN                mean 36.90%  sd 5.40  (262s)
+
+    InceptionTime      sub-08  38.89%
+    InceptionTime      sub-12  48.89%
+    InceptionTime      sub-13  34.44%
+    InceptionTime      sub-14  32.22%
+    InceptionTime      sub-15  30.39%
+    InceptionTime      sub-16  38.89%
+    InceptionTime      sub-19  28.89%
+    InceptionTime      sub-21  40.00%
+    InceptionTime      sub-22  31.11%
+    InceptionTime      sub-23  28.89%
+    InceptionTime      sub-24  37.78%
+    InceptionTime      sub-25  26.67%
+  InceptionTime      mean 34.75%  sd 6.08  (573s)
+
+    GRU+Attention      sub-08  34.44%
+    GRU+Attention      sub-12  36.67%
+    GRU+Attention      sub-13  37.78%
+    GRU+Attention      sub-14  35.56%
+    GRU+Attention      sub-15  35.03%
+    GRU+Attention      sub-16  33.33%
+    GRU+Attention      sub-19  35.56%
+    GRU+Attention      sub-21  55.56%
+    GRU+Attention      sub-22  37.78%
+    GRU+Attention      sub-23  25.56%
+    GRU+Attention      sub-24  23.33%
+    GRU+Attention      sub-25  31.11%
+  GRU+Attention      mean 35.14%  sd 7.55  (276s)
+
+
+=== summary ===
+  architecture              loso    within
+  HemoNet                 33.64%    35.33%
+  CNN+BiLSTM              33.36%    38.74%
+  Transformer             33.82%    36.99%
+  CNN+TemporalAttn        32.53%    35.89%
+  TCN                     32.35%    36.90%
+  InceptionTime           32.43%    34.75%
+  GRU+Attention           33.45%    35.14%
+  chance                  33.33%
+
+wrote deep_results.json
+
+[exited with code 0]

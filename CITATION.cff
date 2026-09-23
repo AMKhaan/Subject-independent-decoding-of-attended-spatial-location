@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: If you use this software, please cite it using these metadata.
+title: >-
+  Subject-independent decoding of attended spatial location from fNIRS:
+  analysis code
+abstract: >-
+  Analysis code and results for a study of subject-independent decoding of
+  attended spatial location from functional near-infrared spectroscopy, using
+  the public OpenNeuro datasets ds004830 (twelve participants, three talker
+  locations) and ds007738 (twenty-nine participants, two locations, with
+  covert-attention and eye-movement-only tasks). The code evaluates decoders
+  trained on all but one participant and tested on the participant left out,
+  under causal (past-trials-only) and transductive (whole-recording) feature
+  normalisation, measures calibration curves as the new participant contributes
+  labelled trials, and tests how much of the transferable signal is shared with
+  eye movement. The datasets themselves are not redistributed here.
+type: software
+license: MIT
+authors:
+  - family-names: Khan
+    given-names: Ahmad Muzaffar
+    orcid: https://orcid.org/0009-0002-5943-8165
+    affiliation: >-
+      School of Computing, National University of Computer and Emerging
+      Sciences (FAST-NUCES), Lahore, Pakistan
+  - family-names: Nasir
+    given-names: Bushra
+    orcid: https://orcid.org/0009-0006-9349-0919
+    affiliation: >-
+      School of Computing, National University of Computer and Emerging
+      Sciences (FAST-NUCES), Lahore, Pakistan
+  - family-names: Khan
+    given-names: Hamid Muzaffar
+    orcid: https://orcid.org/0009-0009-9900-8267
+    affiliation: >-
+      School of Electrical Engineering and Computer Science (SEECS), National
+      University of Sciences and Technology (NUST), Islamabad, Pakistan
+repository-code: >-
+  https://github.com/AMKhaan/Subject-independent-decoding-of-attended-spatial-location
+keywords:
+  - functional near-infrared spectroscopy
+  - fNIRS
+  - spatial auditory attention
+  - brain-computer interface
+  - subject-independent decoding
+  - calibration
+  - eye movement
+  - hearing aids

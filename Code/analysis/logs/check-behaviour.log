@@ -1,0 +1,19 @@
+$ python -u check_behaviour.py
+
+sub     published  full record   epoched     n   verdict
+sub-08      94.44        94.44     92.22    90   ok (published covers all 180)
+sub-12      93.33        93.33     93.33    90   ok
+sub-13      96.67        96.67     96.67    90   ok
+sub-14      77.78        77.78     77.78    90   ok
+sub-15      74.44        74.44     74.16    89   ok (published covers all 90)
+sub-16      94.44        94.44     94.44    90   ok
+sub-19      96.67        96.67     96.67    90   ok
+sub-21      81.11        81.11     81.11    90   ok
+sub-22      78.89        78.89     78.89    90   ok
+sub-23      78.89        78.89     78.89    90   ok
+sub-24      95.56        95.56     95.56    90   ok
+sub-25      48.89        48.89     48.89    90   ok
+
+correct trials in the epoched set: 907 of 1079
+
+All twelve subjects reproduce the published behavioural accuracy exactly.

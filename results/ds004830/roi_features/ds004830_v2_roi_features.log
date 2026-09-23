@@ -1,0 +1,40 @@
+
+##### roi_features.py  2026-09-18 19:33  data=D:\fnirs\Extra\Extra\Code\analysis\data_v2
+  L-FEF  10 channels: S1-D1 S1-D2 S1-D3 S1-D4 S2-D1 S2-D2 S3-D3 S3-D4 S3-D5 S3-D6
+  R-FEF  10 channels: S4-D9 S4-D10 S4-D11 S4-D12 S5-D7 S5-D8 S5-D9 S5-D10 S6-D7 S6-D8
+  L-IPS   4 channels: S9-D13 S9-D14 S11-D13 S11-D14
+  R-IPS   4 channels: S10-D13 S10-D15 S12-D13 S12-D15
+  all 28 channels assigned; STG absent from the shared montage
+
+=== 3class, correct trials, chance 33.3% ===
+  -- within --
+  model                  channel       ROI   ROI - ch   paired Wilcoxon p
+  LDA (Ledoit-Wolf)       57.32%    48.73%     -8.58   0.0093
+  Logistic (L2)           56.93%    49.42%     -7.51   0.0210
+  SVM (RBF)               54.51%    47.17%     -7.33   0.0034
+  Random Forest           58.55%    49.52%     -9.03   0.0161
+  -- loso --
+  model                  channel       ROI   ROI - ch   paired Wilcoxon p
+  LDA (Ledoit-Wolf)       43.49%    41.39%     -2.10   0.3804
+  Logistic (L2)           44.20%    40.50%     -3.70   0.1016
+  SVM (RBF)               41.65%    40.42%     -1.23   1.0000
+  Random Forest           42.00%    39.66%     -2.34   0.2661
+  ROI best within: Random Forest 49.52%, permutation null 34.27%, p = 0.0050
+  ROI best loso: LDA (Ledoit-Wolf) 41.39%, permutation null 33.34%, p = 0.0050
+
+=== lateral, correct trials, chance 50.0% ===
+  -- within --
+  model                  channel       ROI   ROI - ch   paired Wilcoxon p
+  LDA (Ledoit-Wolf)       75.55%    70.57%     -4.98   0.0771
+  Logistic (L2)           76.81%    70.55%     -6.26   0.0342
+  SVM (RBF)               76.39%    69.73%     -6.66   0.0024
+  Random Forest           78.67%    68.56%    -10.11   0.0010
+  -- loso --
+  model                  channel       ROI   ROI - ch   paired Wilcoxon p
+  LDA (Ledoit-Wolf)       60.81%    57.82%     -2.99   0.2661
+  Logistic (L2)           62.17%    58.23%     -3.93   0.1514
+  SVM (RBF)               56.24%    62.14%     +5.90   0.0537
+  Random Forest           54.89%    55.87%     +0.98   0.8457
+  ROI best within: LDA (Ledoit-Wolf) 70.57%, permutation null 50.45%, p = 0.0050
+  ROI best loso: SVM (RBF) 62.14%, permutation null 49.94%, p = 0.0050
+wrote diagnostics/roi-features.json

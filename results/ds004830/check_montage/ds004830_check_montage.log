@@ -1,0 +1,39 @@
+montage check -- what the probe geometry allows across subjects
+
+1. BIDS *_optodes.tsv, 12 subjects
+   optodes compared (those of the shared channels): 25;  max position difference between subjects: 0.000 mm;  distinct z values: [0.0]
+   coordsystem: {"NIRSCoordinateSystem":"CapTrak","NIRSCoordinateUnits":"mm","AnatomicalLandmarkCoordinates":{}}
+   -> the positions are a flat 2-D TEMPLATE, identical for every subject, with no
+      anatomical landmarks. There is no per-subject geometry to register onto, so
+      'ROI space' can only mean pooling channels inside a region.
+
+2. Homer .nirs geometry, long channels (>= 15 mm) per subject
+   Experiment08: 14 sources, 29 detectors, 34 long channels
+   Experiment12: 12 sources, 23 detectors, 30 long channels
+   Experiment13: 12 sources, 23 detectors, 30 long channels
+   Experiment14: 12 sources, 23 detectors, 30 long channels
+   Experiment15: 12 sources, 23 detectors, 30 long channels
+   Experiment16: 12 sources, 23 detectors, 30 long channels
+   Experiment19: 12 sources, 23 detectors, 30 long channels
+   Experiment21: 12 sources, 23 detectors, 30 long channels
+   Experiment22: 12 sources, 23 detectors, 30 long channels
+   Experiment23: 12 sources, 23 detectors, 30 long channels
+   Experiment24: 12 sources, 23 detectors, 30 long channels
+   Experiment25: 12 sources, 23 detectors, 30 long channels
+
+   shared by index (source, detector): 28 channels
+   shared by position:                 30 channels
+   dropped by index matching: S7-D16 at (-125.0, -31.0) mm (L-STG); numbered S7-D18 in Experiment08
+   dropped by index matching: S8-D17 at (125.0, -31.0) mm (R-STG); numbered S8-D19 in Experiment08
+   -> index matching silently drops the superior temporal channels: the only
+      auditory-cortex coverage in an auditory-attention task. build_dataset_v2.py
+      --by-position recovers them (data_v2_30ch/).
+
+3. region of each shared channel (clusters named as Ning et al. name the targets)
+   L-FEF  10: S1-D1 S1-D2 S1-D3 S1-D4 S2-D1 S2-D2 S3-D3 S3-D4 S3-D5 S3-D6
+   R-FEF  10: S4-D9 S4-D10 S4-D11 S4-D12 S5-D7 S5-D8 S5-D9 S5-D10 S6-D7 S6-D8
+   L-IPS   4: S9-D13 S9-D14 S11-D13 S11-D14
+   R-IPS   4: S10-D13 S10-D15 S12-D13 S12-D15
+   hemisphere split: 14 left, 14 right, mirrored about x = 0
+
+wrote diagnostics/montage.log, montage.png

@@ -1,0 +1,134 @@
+paper figures -> ../../manuscript_v2_jne/figures
+
+Fig design  datasets, trial timeline and the three evaluation schemes
+  ds004830 screens (-45, 0, 45) deg, cue->movie 3.19 s; ds007738 screens (-30, 30) deg, cue 2 s + movie 3 s; analysis window 0-12 s
+  -> fig1_design.png / .pdf
+
+Fig 1  onset correction
+  source: results/ds004830/validate_against_v2_events/ds004830_validate_against_v2_events.log
+  source: Code/analysis/logs/decode-3class.log
+  source: results/ds004830/decode/ds004830_v2_3class_correct_decode.log
+  source: Code/analysis/logs/decode-lateral.log
+  source: results/ds004830/decode/ds004830_v2_lateral_decode.log
+  sub-08: offset -2434.34 s, sd 1292.66
+  sub-12: offset -14.99 s, sd 0.69
+  sub-13: offset -12.26 s, sd 0.70
+  sub-14: offset -11.50 s, sd 0.73
+  sub-15: offset -18.38 s, sd 0.67
+  sub-16: offset -14.69 s, sd 0.74
+  sub-19: offset +157.36 s, sd 94.44
+  sub-21: offset +2.20 s, sd 0.69
+  sub-22: offset +10.28 s, sd 0.65
+  sub-23: offset +11.43 s, sd 0.73
+  sub-24: offset +7.29 s, sd 0.66
+  sub-25: offset +1.62 s, sd 0.73
+  3-class, correct trials within: best model misaligned 39.91% -> corrected 58.55%
+  3-class, correct trials loso: best model misaligned 35.94% -> corrected 44.20%
+  2-class, all trials within: best model misaligned 59.39% -> corrected 75.87%
+  2-class, all trials loso: best model misaligned 52.36% -> corrected 60.87%
+  -> fig2_onset_correction.png / .pdf
+
+Fig 2  headline accuracy
+  source: results/ds004830/bootstrap_ci/ds004830_v2_bootstrap_ci.json
+  3class within LDA (Ledoit-Wolf): 57.32% [45.6, 67.5]
+  3class within Logistic (L2): 56.93% [45.5, 67.2]
+  3class within SVM (RBF): 54.51% [45.8, 63.1]
+  3class within Random Forest: 58.55% [47.4, 69.6]  (best)
+  3class loso LDA (Ledoit-Wolf): 43.49% [37.6, 48.5]
+  3class loso Logistic (L2): 44.20% [38.9, 49.8]  (best)
+  3class loso SVM (RBF): 41.65% [36.8, 47.6]
+  3class loso Random Forest: 42.00% [34.8, 48.3]
+  lateral within LDA (Ledoit-Wolf): 75.55% [62.5, 85.3]
+  lateral within Logistic (L2): 76.81% [65.0, 85.8]
+  lateral within SVM (RBF): 76.39% [68.6, 83.2]
+  lateral within Random Forest: 78.67% [68.5, 86.8]  (best)
+  lateral loso LDA (Ledoit-Wolf): 60.81% [51.8, 69.3]
+  lateral loso Logistic (L2): 62.17% [53.6, 70.8]  (best)
+  lateral loso SVM (RBF): 56.24% [48.6, 64.7]
+  lateral loso Random Forest: 54.89% [47.1, 63.9]
+  -> fig3_headline.png / .pdf
+
+Fig 3  realistic zero-shot and Ning et al.
+  source: results/ds004830/normalisation_check/ds004830_v2_normalisation_check.json
+  source: results/ds004830/bootstrap_ci/ds004830_v2_bootstrap_ci.json
+  zero-shot 3class transductive: 42.38% [36.6, 48.5]
+  zero-shot 3class prefix: 39.59% [33.8, 46.2]
+  zero-shot 3class causal: 39.02% [33.2, 45.9]
+  zero-shot 3class none: 38.43% [34.1, 43.1]
+  zero-shot lateral transductive: 60.84% [51.5, 68.8]
+  zero-shot lateral prefix: 54.71% [45.5, 63.3]
+  zero-shot lateral causal: 58.61% [49.0, 67.9]
+  zero-shot lateral none: 53.95% [48.3, 60.7]
+  Ning 3class: ours 59.67 vs 49.36; rho +0.397 p 0.2263; Wilcoxon p 0.1475
+  Ning lateral: ours 78.27 vs 78.27; rho +0.807 p 0.0027; Wilcoxon p 0.8984
+  -> fig4_zeroshot_and_ning.png / .pdf
+
+Fig 4  calibration curve
+  source: results/ds004830/calibration_curve/ds004830_v2_3class_calibration_curve_summary.json
+  pooled_calnorm: k=0 39.1, k=6 45.8, k=12 50.2, k=21 52.5, k=30 54.4
+  pooled_bal: k=0 45.5, k=6 48.6, k=12 51.4, k=21 53.9, k=30 56.4
+  within_lr: k=6 42.1, k=12 48.6, k=21 52.2, k=30 54.9
+  deep_finetune: k=0 42.2, k=6 47.4, k=12 51.9, k=21 54.6, k=30 56.2
+  -> fig5_calibration.png / .pdf
+
+Fig 5  physiology
+  source: results/ds004830/time_resolved/ds004830_v2_time_resolved.npz
+  source: results/ds004830/physiology/ds004830_v2_physiology.json
+  time-resolved: peak 63.18% at +6.00 s; pre-cue mean 34.25%; threshold 37.32%
+  region alone within: L-FEF 53.5, R-FEF 53.0, L-IPS 50.6, R-IPS 47.2
+  region alone loso: L-FEF 41.3, R-FEF 41.9, L-IPS 33.9, R-IPS 37.4
+  -> fig6_physiology.png / .pdf
+
+Fig 6  second dataset (ds007738): replication, calibration, eye-movement control
+  source: results/ds004830/bootstrap_ci/ds004830_v2_bootstrap_ci.json
+  source: results/ds004830/normalisation_check/ds004830_v2_normalisation_check.json
+  source: results/ds007738/bootstrap_ci/ds007738_overt_bootstrap_ci.json
+  source: results/ds007738/normalisation_check/ds007738_overt_normalisation_check.json
+  source: results/ds007738/calibration_curve/ds007738_overt_lateral_calibration_curve_summary.json
+  source: results/ds007738/control_eye_movement/ds007738_control_eye_movement.json
+  ds004830 within: 78.67% [68.5, 86.8]
+  ds004830 LOSO: 62.17% [53.6, 70.8]
+  ds004830 causal zero-shot: 58.61% [48.8, 67.4]
+  ds007738 within: 72.48% [66.6, 78.1]
+  ds007738 LOSO: 65.71% [60.3, 71.2]
+  ds007738 causal zero-shot: 66.91% [61.9, 72.5]
+  calibration pooled_calnorm: k=0 57.7, k=4 60.9, k=8 65.7, k=14 68.2, k=20 69.8, k=26 71.3
+  calibration pooled_bal: k=0 66.5, k=4 67.9, k=8 68.9, k=14 70.2, k=20 71.3, k=26 72.0
+  calibration within_lr: k=4 55.9, k=8 59.6, k=14 63.7, k=20 66.4, k=26 68.9
+  calibration deep_finetune: k=0 63.9, k=4 61.8, k=8 63.5, k=14 65.7, k=20 67.8, k=26 68.9
+  control within overt (matched n): 66.14% [62.6, 70.2]
+  control within eye: 68.75% [64.1, 73.7]
+  control within covert (matched n): 55.78% [52.9, 59.1]
+  control LOSO overt (matched n): 62.89% [58.8, 67.5]
+  control LOSO eye: 68.45% [63.4, 73.7]
+  control LOSO covert (matched n): 52.84% [51.3, 54.1]
+  control transfer eye -> overt: 61.99% [58.6, 66.2]
+  control transfer eye -> covert: 50.49% [47.9, 53.7]
+  -> fig7_ds007738.png / .pdf
+
+Fig S7  deep vs classical, identical trials
+  source: results/ds004830/deep_models_gpu/ds004830_v2_correct_deep_models_gpu.log
+  source: results/ds004830/bootstrap_ci/ds004830_v2_bootstrap_ci.json
+  within HemoNet: 54.03 +/- 1.78
+  within CNN+BiLSTM: 43.61 +/- 2.37
+  within Transformer: 51.28 +/- 0.77
+  within CNN+TemporalAttn: 52.26 +/- 2.57
+  within TCN: 40.90 +/- 0.99
+  within InceptionTime: 53.19 +/- 1.57
+  within GRU+Attention: 48.60 +/- 1.65
+  loso HemoNet: 42.53 +/- 1.31
+  loso CNN+BiLSTM: 38.09 +/- 1.42
+  loso Transformer: 40.77 +/- 1.29
+  loso CNN+TemporalAttn: 40.88 +/- 0.87
+  loso TCN: 36.28 +/- 1.17
+  loso InceptionTime: 41.16 +/- 1.53
+  loso GRU+Attention: 42.06 +/- 1.60
+  -> figS7_deep_vs_classical.png / .pdf
+
+supplementary figures copied from plots/ (each made by its own script):
+  figS1_montage.png <- plots/ds004830/check_montage/ds004830_check_montage.png
+  figS2_stg_channels.png <- plots/ds004830/plot_diagnostics/ds004830_v2_plot_diagnostics_channels_28_vs_30.png
+  figS3_onset_anchor.png <- plots/ds004830/check_onset_anchor/ds004830_v2_check_onset_anchor.png
+  figS4_ning_pipeline.png <- plots/ds004830/plot_diagnostics/ds004830_v2_plot_diagnostics_ning.png
+  figS5_protocol_ablation.png <- plots/ds004830/plot_diagnostics/ds004830_v2_plot_diagnostics_ablation.png
+  figS6_roi_features.png <- plots/ds004830/plot_diagnostics/ds004830_v2_plot_diagnostics_roi_features.png

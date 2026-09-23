@@ -1,0 +1,46 @@
+build_ds007738.py  task=covert  tddr=True  2026-09-19 05:47
+  raw=D:/fnirs/ds007738/raw
+  out=D:/fnirs/ds007738/derived\covert
+  30 subjects, 60 runs with events
+
+  channel set taken from 'overt': 185 channels (this task's own SNR rule would keep 177)
+  ! sub-11 EXCLUDED: its runs contain byte-identical signal arrays (a duplicated
+    recording) with different event files, so trial timing cannot be trusted
+  36 recordings contain NaN samples (all in the first sample; replaced and interpolated): 886-1032 values each
+  probe geometry identical across all recordings: True
+  channels: 337 long (>= 20 mm), 230 short; 185 long channels pass SNR >= 1.5 in >= 90% of recordings
+  sampling rate 8.9888 Hz (range 8.9888-8.9888)
+
+  subject  runs  trials    L    R  correct  include  gaze_ok
+  sub-01      2      60   35   25       56       56       56
+  sub-02      2      59   33   26       37       37       37
+  sub-03      2      59   27   32       55       55       56
+  sub-04      2      60   31   29       58       58       59
+  sub-05      2      60   34   26       44       44       45
+  sub-10      2      60   32   28       47       47       47
+  sub-12      2      60   34   26       60       60       60
+  sub-13      2      60   26   34       51       51       51
+  sub-14      2      60   30   30       48       48       50
+  sub-15      2      60   28   32       43       43       46
+  sub-18      2      60   28   32       56       56       56
+  sub-20      2      35   16   19       35       35       35
+  sub-22      2      60   31   29       59       59       60
+  sub-23      2      59   29   30       59       59       59
+  sub-24      2      59   27   32       59       59       59
+  sub-25      2      60   29   31       60       60       60
+  sub-28      2      60   27   33       60       60       60
+  sub-29      2      36   16   20       36       36       36
+  sub-30      2      60   33   27       60       60       60
+  sub-31      2      60   32   28       58       58       60
+  sub-32      2      57   32   25       57       57       57
+  sub-33      2      60   23   37       59       59       59
+  sub-34      2      60   33   27       58       58       60
+  sub-35      2      60   34   26       60       60       60
+  sub-39      2      60   30   30       60       60       60
+  sub-41      2      60   31   29       35       35       47
+  sub-44      2      60   29   31       57       57       58
+  sub-46      2      60   26   34       60       60       60
+  sub-47      2      60   36   24       59       59       60
+
+  total usable trials: 1546 over 29 subjects
+wrote D:/fnirs/ds007738/derived\covert, diagnostics/build-ds007738-covert.log / .png

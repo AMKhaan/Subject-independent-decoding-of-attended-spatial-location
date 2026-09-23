@@ -1,0 +1,51 @@
+{
+  "upload_type": "software",
+  "title": "Subject-independent decoding of attended spatial location from fNIRS: calibration curves and the eye-movement confound (analysis code)",
+  "description": "Analysis code and results for a study of subject-independent decoding of attended spatial location from functional near-infrared spectroscopy, using two public OpenNeuro datasets: ds004830 (twelve participants attending one of three talkers) and ds007738 (twenty-nine participants attending one of two, also with covert-attention and eye-movement-only tasks). One fixed pipeline trains decoders on all but one participant and tests on the participant left out, with selection-aware permutation tests. Features are normalised either over a new participant's whole recording or, as a live system must, on past trials only; calibration curves measure how accuracy grows as the new participant contributes labelled trials; and a decoder trained only on eye movements quantifies how much of the transferable signal is shared with gaze. Normalising on past trials only, the attended location was decoded in unseen people at 39.0 percent for three locations (chance 33.3 percent) and 58.6 percent for two (chance 50 percent) in the first dataset, and at 66.9 percent for two in the second; whole-recording normalisation overstated accuracy by up to 3.4 points. The datasets themselves are not redistributed here.",
+  "creators": [
+    {
+      "name": "Khan, Ahmad Muzaffar",
+      "affiliation": "National University of Computer and Emerging Sciences (FAST-NUCES), School of Computing, Lahore, Pakistan",
+      "orcid": "0009-0002-5943-8165"
+    },
+    {
+      "name": "Nasir, Bushra",
+      "affiliation": "National University of Computer and Emerging Sciences (FAST-NUCES), School of Computing, Lahore, Pakistan",
+      "orcid": "0009-0006-9349-0919"
+    },
+    {
+      "name": "Khan, Hamid Muzaffar",
+      "affiliation": "National University of Sciences and Technology (NUST), School of Electrical Engineering and Computer Science, Islamabad, Pakistan",
+      "orcid": "0009-0009-9900-8267"
+    }
+  ],
+  "license": "MIT",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "functional near-infrared spectroscopy",
+    "fNIRS",
+    "spatial auditory attention",
+    "brain-computer interface",
+    "subject-independent decoding",
+    "transfer learning",
+    "calibration",
+    "eye movement",
+    "hearing aids",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://openneuro.org/datasets/ds004830",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://openneuro.org/datasets/ds007738",
+      "relation": "isDerivedFrom",
+      "resource_type": "dataset",
+      "scheme": "url"
+    }
+  ]
+}

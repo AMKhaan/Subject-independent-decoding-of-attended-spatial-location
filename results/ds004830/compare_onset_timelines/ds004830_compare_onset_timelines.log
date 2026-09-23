@@ -1,0 +1,117 @@
+Which timeline is right: reconstructed vs official ds004830 v2.0.0
+root       : E:\Extra\Dataset\derivatives
+checkpoint : E:\Extra\Code\analysis\diagnostics\timeline-checkpoint.json  (0 subject(s) already done)
+
+shared montage: 28 long channels
+
+=== sub-08 ===
+    data (65691, 56), 6569 s over 3 run(s)
+    recon     n=90   peak -1.0140 uM @   7.3 s  HbO/HbR r=+0.674  LDA 38.89%  Logistic 38.89%
+    official  n=67   peak +3.0866 uM @   4.8 s  HbO/HbR r=+0.294  LDA 52.75%  Logistic 49.45%
+    figure -> timeline-sub-08.png
+    checkpoint saved
+
+=== sub-12 ===
+    data (26290, 56), 2629 s over 1 run(s)
+    recon     n=90   peak -1.6237 uM @   5.7 s  HbO/HbR r=-0.442  LDA 41.11%  Logistic 43.33%
+    official  n=90   peak -2.1602 uM @   8.5 s  HbO/HbR r=-0.485  LDA 84.44%  Logistic 81.11%
+    figure -> timeline-sub-12.png
+    checkpoint saved
+
+=== sub-13 ===
+    data (35610, 56), 3561 s over 1 run(s)
+    recon     n=90   peak +7.6472 uM @   6.9 s  HbO/HbR r=-0.855  LDA 44.44%  Logistic 40.00%
+    official  n=90   peak -7.3436 uM @   9.0 s  HbO/HbR r=-0.378  LDA 64.44%  Logistic 63.33%
+    figure -> timeline-sub-13.png
+    checkpoint saved
+
+=== sub-14 ===
+    data (26850, 56), 2685 s over 1 run(s)
+    recon     n=90   peak +3.8930 uM @   7.7 s  HbO/HbR r=-0.713  LDA 28.89%  Logistic 32.22%
+    official  n=90   peak +3.1591 uM @   4.7 s  HbO/HbR r=-0.684  LDA 34.44%  Logistic 35.56%
+    figure -> timeline-sub-14.png
+    checkpoint saved
+
+=== sub-15 ===
+    data (24240, 56), 2424 s over 1 run(s)
+    recon     n=89   peak -1.1535 uM @   2.5 s  HbO/HbR r=+0.201  LDA 34.77%  Logistic 36.01%
+    official  n=89   peak -1.0196 uM @   9.0 s  HbO/HbR r=+0.423  LDA 33.66%  Logistic 29.15%
+    figure -> timeline-sub-15.png
+    checkpoint saved
+
+=== sub-16 ===
+    data (27010, 56), 2701 s over 1 run(s)
+    recon     n=90   peak -2.0882 uM @   9.8 s  HbO/HbR r=-0.855  LDA 42.22%  Logistic 47.78%
+    official  n=90   peak +1.1192 uM @   5.3 s  HbO/HbR r=-0.714  LDA 83.33%  Logistic 80.00%
+    figure -> timeline-sub-16.png
+    checkpoint saved
+
+=== sub-19 ===
+    data (27960, 56), 2796 s over 1 run(s)
+    recon     n=90   peak +1.2810 uM @  11.9 s  HbO/HbR r=-0.747  LDA 41.11%  Logistic 40.00%
+    official  n=90   peak -1.6673 uM @   9.7 s  HbO/HbR r=+0.841  LDA 80.00%  Logistic 81.11%
+    figure -> timeline-sub-19.png
+    checkpoint saved
+
+=== sub-21 ===
+    data (25200, 56), 2520 s over 1 run(s)
+    recon     n=90   peak -3.0859 uM @  11.9 s  HbO/HbR r=-0.678  LDA 57.78%  Logistic 57.78%
+    official  n=90   peak +2.8491 uM @   2.5 s  HbO/HbR r=-0.801  LDA 55.56%  Logistic 52.22%
+    figure -> timeline-sub-21.png
+    checkpoint saved
+
+=== sub-22 ===
+    data (23860, 56), 2386 s over 1 run(s)
+    recon     n=90   peak -0.8406 uM @  11.9 s  HbO/HbR r=-0.960  LDA 32.22%  Logistic 32.22%
+    official  n=90   peak +0.6231 uM @   9.7 s  HbO/HbR r=-0.723  LDA 66.67%  Logistic 64.44%
+    figure -> timeline-sub-22.png
+    checkpoint saved
+
+=== sub-23 ===
+    data (26770, 56), 2677 s over 1 run(s)
+    recon     n=90   peak -1.0230 uM @   8.1 s  HbO/HbR r=-0.529  LDA 33.33%  Logistic 31.11%
+    official  n=90   peak +2.4621 uM @   3.5 s  HbO/HbR r=-0.879  LDA 50.00%  Logistic 46.67%
+    figure -> timeline-sub-23.png
+    checkpoint saved
+
+=== sub-24 ===
+    data (24420, 56), 2442 s over 1 run(s)
+    recon     n=90   peak -1.5299 uM @   5.2 s  HbO/HbR r=-0.593  LDA 58.89%  Logistic 61.11%
+    official  n=90   peak -1.7135 uM @   8.7 s  HbO/HbR r=-0.917  LDA 72.22%  Logistic 67.78%
+    figure -> timeline-sub-24.png
+    checkpoint saved
+
+=== sub-25 ===
+    data (26990, 56), 2699 s over 1 run(s)
+    recon     n=90   peak +0.9530 uM @   5.0 s  HbO/HbR r=+0.089  LDA 25.56%  Logistic 30.00%
+    official  n=90   peak -0.6707 uM @   8.4 s  HbO/HbR r=-0.070  LDA 28.89%  Logistic 26.67%
+    figure -> timeline-sub-25.png
+    checkpoint saved
+
+--- per-subject comparison ---
+sub        |amp| rec  |amp| off  lat rec  lat off   r rec   r off  LDA rec  LDA off
+sub-08        1.0140     3.0866      7.3      4.8   0.674   0.294    38.89    52.75
+sub-12        1.6237     2.1602      5.7      8.5  -0.442  -0.485    41.11    84.44
+sub-13        7.6472     7.3436      6.9      9.0  -0.855  -0.378    44.44    64.44
+sub-14        3.8930     3.1591      7.7      4.7  -0.713  -0.684    28.89    34.44
+sub-15        1.1535     1.0196      2.5      9.0   0.201   0.423    34.77    33.66
+sub-16        2.0882     1.1192      9.8      5.3  -0.855  -0.714    42.22    83.33
+sub-19        1.2810     1.6673     11.9      9.7  -0.747   0.841    41.11    80.00
+sub-21        3.0859     2.8491     11.9      2.5  -0.678  -0.801    57.78    55.56
+sub-22        0.8406     0.6231     11.9      9.7  -0.960  -0.723    32.22    66.67
+sub-23        1.0230     2.4621      8.1      3.5  -0.529  -0.879    33.33    50.00
+sub-24        1.5299     1.7135      5.2      8.7  -0.593  -0.917    58.89    72.22
+sub-25        0.9530     0.6707      5.0      8.4   0.089  -0.070    25.56    28.89
+
+--- group means ---
+reconstructed      |amp| 2.1778  lat  7.83 s (6/12 in 4-8 s)  r -0.451  LDA 39.93%  Logistic 40.87%
+official v2.0.0    |amp| 2.3229  lat  6.98 s (3/12 in 4-8 s)  r -0.341  LDA 58.87%  Logistic 56.46%
+
+summary figure -> timeline-summary.png
+
+--- verdict ---
+  decoding accuracy            reconstructed +39.9346  official +58.8673  -> official
+  evoked amplitude             reconstructed +2.1778  official +2.3229  -> official
+  HbO/HbR anti-correlation     reconstructed -0.4506  official -0.3410  -> reconstructed
+
+  reconstructed wins 1 of 3 criteria.

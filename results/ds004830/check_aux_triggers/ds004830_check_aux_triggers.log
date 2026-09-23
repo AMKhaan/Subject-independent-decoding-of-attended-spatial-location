@@ -1,0 +1,263 @@
+Hardware trigger check against the reconstructed onsets
+root    : E:\Extra\Dataset\derivatives
+out     : E:\Extra\Code\analysis\diagnostics
+
+=== Experiment08 ===
+    runs ['03', '04', '06']  startT 800.000  trials 180
+    aux shape (89999, 8)
+      col 0: min +0.0532  max +4.8021  sd 0.24042  rails [+0.055,+0.060]  pulses 18806
+      col 1: min +0.0323  max +0.0417  sd 0.00017  rails [+0.040,+0.041]  pulses 21133
+      col 2: min +0.0253  max +0.0269  sd 0.00017  rails [+0.026,+0.027]  pulses 17755
+      col 3: min +0.0546  max +0.0583  sd 0.00056  rails [+0.055,+0.058]  pulses 20641
+      col 4: min +0.0500  max +0.0536  sd 0.00039  rails [+0.051,+0.053]  pulses 21048
+      col 5: min +0.0504  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 21239
+      col 6: min +0.0505  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 19160
+      col 7: min +0.0505  max +0.0536  sd 0.00040  rails [+0.051,+0.053]  pulses 22256
+    figure -> aux-Experiment08.png
+    run 03: 89999 samples, 1800.0 s, 18806 edges on col 0
+    run 04: 90001 samples, 3600.0 s, 18001 edges on col 0
+    run 06: 148450 samples, 2969.0 s, 31876 edges on col 0
+    total edges 68683   trials x4 = 720
+    gaps: n=68682 min 0.040 median 0.080 max 1800.200 s;  gaps > 5 s: 1
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- 1 long gaps but 68683 edges against 720 expected
+
+=== Experiment12 ===
+    runs ['03']  startT 22.000  trials 90
+    aux shape (131450, 8)
+      col 0: min +0.0558  max +4.8021  sd 0.34979  rails [+0.057,+0.060]  pulses 23455
+      col 1: min +0.0296  max +0.0436  sd 0.00017  rails [+0.040,+0.041]  pulses 32327
+      col 2: min +0.0255  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 22931
+      col 3: min +0.0546  max +0.0584  sd 0.00056  rails [+0.055,+0.058]  pulses 32688
+      col 4: min +0.0502  max +0.0534  sd 0.00039  rails [+0.051,+0.053]  pulses 32699
+      col 5: min +0.0504  max +0.0536  sd 0.00038  rails [+0.051,+0.053]  pulses 29433
+      col 6: min +0.0505  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 32470
+      col 7: min +0.0502  max +0.0536  sd 0.00040  rails [+0.051,+0.053]  pulses 32180
+    figure -> aux-Experiment12.png
+    run 03: 131450 samples, 2629.0 s, 23455 edges on col 0
+    total edges 23455   trials x4 = 360
+    gaps: n=23454 min 0.040 median 0.100 max 1.900 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2629 s (8.92 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment13 ===
+    runs ['01']  startT 1021.000  trials 90
+    aux shape (178050, 8)
+      col 0: min +0.0577  max +4.8021  sd 0.30033  rails [+0.058,+0.059]  pulses 37675
+      col 1: min +0.0319  max +0.0461  sd 0.00017  rails [+0.040,+0.041]  pulses 44072
+      col 2: min +0.0255  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 44128
+      col 3: min +0.0546  max +0.0584  sd 0.00056  rails [+0.055,+0.058]  pulses 44452
+      col 4: min +0.0502  max +0.0534  sd 0.00039  rails [+0.051,+0.053]  pulses 42470
+      col 5: min +0.0504  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 42610
+      col 6: min +0.0505  max +0.0539  sd 0.00038  rails [+0.051,+0.053]  pulses 37398
+      col 7: min +0.0504  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 44740
+    figure -> aux-Experiment13.png
+    run 01: 178050 samples, 3561.0 s, 37675 edges on col 0
+    total edges 37675   trials x4 = 360
+    gaps: n=37674 min 0.040 median 0.080 max 1.060 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 3561 s (10.58 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment14 ===
+    runs ['02']  startT 14.000  trials 90
+    aux shape (134250, 8)
+      col 0: min +0.0568  max +4.8021  sd 0.34576  rails [+0.057,+0.060]  pulses 21653
+      col 1: min +0.0331  max +0.0458  sd 0.00016  rails [+0.041,+0.041]  pulses 31831
+      col 2: min +0.0256  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 33237
+      col 3: min +0.0548  max +0.0584  sd 0.00056  rails [+0.055,+0.058]  pulses 29448
+      col 4: min +0.0499  max +0.0532  sd 0.00039  rails [+0.051,+0.053]  pulses 30116
+      col 5: min +0.0505  max +0.0536  sd 0.00038  rails [+0.051,+0.053]  pulses 30104
+      col 6: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 33414
+      col 7: min +0.0504  max +0.0536  sd 0.00039  rails [+0.051,+0.053]  pulses 33196
+    figure -> aux-Experiment14.png
+    run 02: 134250 samples, 2685.0 s, 21653 edges on col 0
+    total edges 21653   trials x4 = 360
+    gaps: n=21652 min 0.040 median 0.100 max 2.500 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 1  median 2.500
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2685 s (8.06 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment15 ===
+    runs ['04']  startT 1.000  trials 90
+    aux shape (121200, 8)
+      col 0: min +0.0574  max +4.8021  sd 0.36370  rails [+0.058,+0.059]  pulses 22689
+      col 1: min +0.9292  max +1.1247  sd 0.01307  rails [+1.061,+1.103]  pulses 72
+      col 2: min +1.0696  max +1.1306  sd 0.00239  rails [+1.085,+1.095]  pulses 10418
+      col 3: min +1.3456  max +1.3929  sd 0.00398  rails [+1.367,+1.383]  pulses 2075
+      col 4: min +0.0502  max +0.0534  sd 0.00039  rails [+0.051,+0.053]  pulses 29235
+      col 5: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 29407
+      col 6: min +0.0507  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 26906
+      col 7: min +0.0505  max +0.0536  sd 0.00039  rails [+0.051,+0.053]  pulses 27001
+    figure -> aux-Experiment15.png
+    run 04: 121200 samples, 2424.0 s, 22689 edges on col 0
+    total edges 22689   trials x4 = 360
+    gaps: n=22688 min 0.040 median 0.080 max 1.300 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2424 s (9.36 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment16 ===
+    runs ['04']  startT 13.000  trials 90
+    aux shape (135050, 8)
+      col 0: min +0.0577  max +4.8021  sd 0.34460  rails [+0.058,+0.059]  pulses 23039
+      col 1: min +0.0372  max +1.1569  sd 0.33075  rails [+0.040,+1.125]  pulses 5
+      col 2: min -0.0886  max +1.1164  sd 0.33201  rails [-0.088,+1.102]  pulses 5
+      col 3: min -0.0655  max +1.3967  sd 0.40809  rails [-0.064,+1.381]  pulses 5
+      col 4: min +0.0500  max +0.0532  sd 0.00039  rails [+0.051,+0.053]  pulses 32157
+      col 5: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 31721
+      col 6: min +0.0505  max +0.0539  sd 0.00038  rails [+0.051,+0.053]  pulses 33139
+      col 7: min +0.0502  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 33221
+    figure -> aux-Experiment16.png
+    run 04: 135050 samples, 2701.0 s, 23039 edges on col 0
+    total edges 23039   trials x4 = 360
+    gaps: n=23038 min 0.040 median 0.080 max 2.000 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2701 s (8.53 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment19 ===
+    runs ['04']  startT 28.000  trials 90
+    aux shape (139800, 8)
+      col 0: min +0.0569  max +4.8021  sd 0.33927  rails [+0.057,+0.059]  pulses 27751
+      col 1: min +0.0392  max +1.1202  sd 0.05600  rails [+0.040,+0.041]  pulses 28727
+      col 2: min +0.0255  max +0.0269  sd 0.00017  rails [+0.026,+0.027]  pulses 34175
+      col 3: min -0.0642  max +0.9533  sd 0.08249  rails [-0.062,+0.147]  pulses 28043
+      col 4: min +0.0500  max +0.0534  sd 0.00038  rails [+0.051,+0.053]  pulses 33726
+      col 5: min +0.0505  max +0.0536  sd 0.00038  rails [+0.051,+0.053]  pulses 32725
+      col 6: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 34589
+      col 7: min +0.0504  max +0.0536  sd 0.00039  rails [+0.051,+0.053]  pulses 34672
+    figure -> aux-Experiment19.png
+    run 04: 139800 samples, 2796.0 s, 27751 edges on col 0
+    total edges 27751   trials x4 = 360
+    gaps: n=27750 min 0.040 median 0.080 max 1.640 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2796 s (9.93 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment21 ===
+    runs ['03']  startT 1.000  trials 90
+    aux shape (126000, 8)
+      col 0: min +0.0580  max +4.8021  sd 0.35713  rails [+0.058,+0.059]  pulses 22076
+      col 1: min +0.0267  max +0.0700  sd 0.00085  rails [+0.038,+0.043]  pulses 38633
+      col 2: min +0.0255  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 28461
+      col 3: min -0.0648  max +0.1460  sd 0.06911  rails [-0.063,+0.143]  pulses 25350
+      col 4: min +0.0502  max +0.0534  sd 0.00038  rails [+0.051,+0.053]  pulses 30500
+      col 5: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 29826
+      col 6: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 31213
+      col 7: min +0.0504  max +0.0536  sd 0.00039  rails [+0.051,+0.053]  pulses 31125
+    figure -> aux-Experiment21.png
+    run 03: 126000 samples, 2520.0 s, 22076 edges on col 0
+    total edges 22076   trials x4 = 360
+    gaps: n=22075 min 0.040 median 0.080 max 1.080 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2520 s (8.76 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment22 ===
+    runs ['02']  startT 1.000  trials 90
+    aux shape (119300, 8)
+      col 0: min +0.0580  max +4.8021  sd 0.36696  rails [+0.058,+0.059]  pulses 23493
+      col 1: min +1.0055  max +1.1465  sd 0.00847  rails [+1.051,+1.126]  pulses 4
+      col 2: min +0.0255  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 29466
+      col 3: min +1.0705  max +1.1329  sd 0.00328  rails [+1.103,+1.119]  pulses 9559
+      col 4: min +0.0500  max +0.0532  sd 0.00039  rails [+0.051,+0.053]  pulses 29498
+      col 5: min +0.0504  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 28997
+      col 6: min +0.0504  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 26401
+      col 7: min +0.0502  max +0.0536  sd 0.00039  rails [+0.051,+0.053]  pulses 26784
+    figure -> aux-Experiment22.png
+    run 02: 119300 samples, 2386.0 s, 23493 edges on col 0
+    total edges 23493   trials x4 = 360
+    gaps: n=23492 min 0.040 median 0.080 max 0.920 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2386 s (9.85 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment23 ===
+    runs ['02']  startT 1.000  trials 90
+    aux shape (133850, 8)
+      col 0: min +0.0581  max +4.8021  sd 0.34660  rails [+0.058,+0.059]  pulses 19087
+      col 1: min +0.0401  max +0.0435  sd 0.00016  rails [+0.040,+0.041]  pulses 32462
+      col 2: min +0.0255  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 33182
+      col 3: min +0.0548  max +0.0584  sd 0.00055  rails [+0.055,+0.058]  pulses 32816
+      col 4: min +0.0502  max +0.0534  sd 0.00038  rails [+0.051,+0.053]  pulses 28151
+      col 5: min +0.0505  max +0.0539  sd 0.00038  rails [+0.051,+0.053]  pulses 33194
+      col 6: min +0.0507  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 30235
+      col 7: min +0.0505  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 30911
+    figure -> aux-Experiment23.png
+    run 02: 133850 samples, 2677.0 s, 19087 edges on col 0
+    total edges 19087   trials x4 = 360
+    gaps: n=19086 min 0.040 median 0.100 max 1.620 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2677 s (7.13 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment24 ===
+    runs ['03']  startT 1.000  trials 90
+    aux shape (122100, 8)
+      col 0: min +0.0581  max +4.8021  sd 0.36250  rails [+0.058,+0.059]  pulses 26060
+      col 1: min +0.0401  max +0.0478  sd 0.00017  rails [+0.040,+0.041]  pulses 28708
+      col 2: min +0.0256  max +0.0270  sd 0.00017  rails [+0.026,+0.027]  pulses 29685
+      col 3: min +0.0548  max +0.0584  sd 0.00056  rails [+0.055,+0.058]  pulses 26114
+      col 4: min +0.0502  max +0.0534  sd 0.00039  rails [+0.051,+0.053]  pulses 29676
+      col 5: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 29233
+      col 6: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 25785
+      col 7: min +0.0504  max +0.0536  sd 0.00040  rails [+0.051,+0.053]  pulses 30093
+    figure -> aux-Experiment24.png
+    run 03: 122100 samples, 2442.0 s, 26060 edges on col 0
+    total edges 26060   trials x4 = 360
+    gaps: n=26059 min 0.040 median 0.080 max 0.920 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2442 s (10.67 edges/s); trials are ~28 s apart, so this has no trial structure
+
+=== Experiment25 ===
+    runs ['03']  startT 1.000  trials 90
+    aux shape (134950, 8)
+      col 0: min +0.0581  max +4.8021  sd 0.34523  rails [+0.058,+0.059]  pulses 25330
+      col 1: min +0.0400  max +0.0461  sd 0.00016  rails [+0.040,+0.041]  pulses 33281
+      col 2: min +0.0255  max +0.0269  sd 0.00017  rails [+0.026,+0.027]  pulses 33089
+      col 3: min +0.0546  max +0.0584  sd 0.00055  rails [+0.055,+0.058]  pulses 32998
+      col 4: min +0.0502  max +0.0534  sd 0.00039  rails [+0.051,+0.053]  pulses 33584
+      col 5: min +0.0504  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 33305
+      col 6: min +0.0505  max +0.0537  sd 0.00038  rails [+0.051,+0.053]  pulses 29828
+      col 7: min +0.0505  max +0.0537  sd 0.00039  rails [+0.051,+0.053]  pulses 30420
+    figure -> aux-Experiment25.png
+    run 03: 134950 samples, 2699.0 s, 25330 edges on col 0
+    total edges 25330   trials x4 = 360
+    gaps: n=25329 min 0.040 median 0.080 max 0.940 s;  gaps > 5 s: 0
+      gaps near T2-T1 (2.47 s): 0
+      gaps near T3-T2 (3.19 s): 0
+    VERDICT: NOT a trigger line -- no gap exceeds 5 s over 2699 s (9.39 edges/s); trials are ~28 s apart, so this has no trial structure
+
+--- summary ---
+exp                edges  4x trials  verdict
+Experiment08       68683        720  not a trigger line
+Experiment12       23455        360  not a trigger line
+Experiment13       37675        360  not a trigger line
+Experiment14       21653        360  not a trigger line
+Experiment15       22689        360  not a trigger line
+Experiment16       23039        360  not a trigger line
+Experiment19       27751        360  not a trigger line
+Experiment21       22076        360  not a trigger line
+Experiment22       23493        360  not a trigger line
+Experiment23       19087        360  not a trigger line
+Experiment24       26060        360  not a trigger line
+Experiment25       25330        360  not a trigger line
+
+CONCLUSION: no subject's aux column 0 carries trial markers. The channel
+is a continuous high-rate line with no gaps at the ~28 s trial spacing,
+which is what the Techen frequency-multiplexing clock looks like, not what
+an event line looks like. There is therefore no independent hardware
+timing in these files, and no offset can be computed from them.
+
+This REFUTES the hypothesis that the epochs are misaligned. The onset
+reconstruction startT + Trigger3 remains the only timing available, and
+the evidence for it is unchanged: the behavioural table reproduces exactly
+for all twelve subjects, and the group evoked response beats a
+shuffled-onset control by 2.3x in amplitude.
+
+Consequence for the project: the ~10-point deficit against Ning et al. is
+NOT a timing artefact, so it must be sought in the feature path.

@@ -1,0 +1,35 @@
+task: lateral   chance = 50.0%
+12 subjects, 704 trials, 336 features (6 time bins x 56 channels)
+
+=== within-subject 5-fold CV (5 repeats) -- comparable to Ning et al. ===
+  LDA (Ledoit-Wolf)    mean 75.66%   sd 19.02   range 40.00-95.33   above chance: 10/12
+  Logistic (L2)        mean 75.66%   sd 19.71   range 38.33-95.67   above chance: 10/12
+  SVM (RBF)            mean 73.93%   sd 16.74   range 46.00-94.00   above chance: 9/12
+  Random Forest        mean 75.87%   sd 20.94   range 39.33-99.33   above chance: 9/12
+
+=== leave-one-subject-out -- tests generalisation to a new person ===
+  LDA (Ledoit-Wolf)    mean 60.87%   sd 13.28   range 38.33-83.33   above chance: 9/12
+  Logistic (L2)        mean 60.04%   sd 15.58   range 35.00-84.44   above chance: 9/12
+  SVM (RBF)            mean 56.37%   sd 12.55   range 38.33-75.56   above chance: 9/12
+  Random Forest        mean 56.22%   sd 14.95   range 30.00-75.00   above chance: 7/12
+
+=== per-subject accuracy, best model in each protocol ===
+  subject   within (Random Forest)     LOSO (LDA (Ledoit-Wolf))
+  sub-08                    81.78%         77.78%
+  sub-12                    94.33%         60.00%
+  sub-13                    73.67%         50.00%
+  sub-14                    39.33%         38.33%
+  sub-15                    48.00%         57.63%
+  sub-16                    94.67%         61.67%
+  sub-19                    99.33%         51.67%
+  sub-21                    88.00%         70.00%
+  sub-22                    89.33%         83.33%
+  sub-23                    71.00%         48.33%
+  sub-24                    91.00%         78.33%
+  sub-25                    40.00%         53.33%
+
+=== label permutation, 200 permutations ===
+  within / Random Forest: observed 75.87%
+    permutation 20/200    permutation 40/200    permutation 60/200    permutation 80/200    permutation 100/200    permutation 120/200    permutation 140/200    permutation 160/200    permutation 180/200    permutation 200/200                                            null mean 49.89%  sd 2.60  95th pct 54.24%  ->  p = 0.0050 (floor, p < 0.0050)  significant
+  loso / LDA (Ledoit-Wolf): observed 60.87%
+    permutation 20/200    permutation 40/200    permutation 60/200    permutation 80/200    permutation 100/200    permutation 120/200    permutation 140/200    permutation 160/200    permutation 180/200    permutation 200/200                                            null mean 49.53%  sd 2.27  95th pct 52.85%  ->  p = 0.0050 (floor, p < 0.0050)  significant

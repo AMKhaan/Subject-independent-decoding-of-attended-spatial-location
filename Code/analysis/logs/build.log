@@ -1,0 +1,16 @@
+$ python -u build_dataset.py
+
+epoch -2..+12 s at 10 Hz, locked to Trigger3
+28 long channels common to all subjects -> 56 features (HbO + HbR)
+  sub-08: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=90  dropped=0  boundary=1  acc=0.92
+  sub-12: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.93
+  sub-13: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.97
+  sub-14: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.78
+  sub-15: X=(89, 140, 56)  y={1: 30, 2: 30, 3: 29}  single-talker excluded=0  dropped=1  boundary=0  acc=0.74
+  sub-16: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.94
+  sub-19: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.97
+  sub-21: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.81
+  sub-22: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.79
+  sub-23: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.79
+  sub-24: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.96
+  sub-25: X=(90, 140, 56)  y={1: 30, 2: 30, 3: 30}  single-talker excluded=0  dropped=0  boundary=0  acc=0.49

@@ -1,0 +1,218 @@
+Reconstructed onsets vs official ds004830 v2.0.0 events
+root : E:\Extra\Dataset\derivatives
+out  : E:\Extra\Code\analysis\diagnostics
+
+=== sub-08 ===
+    official trials 90   psychtoolbox trials 180   startT 800.000
+    competing-talker trials in psychtoolbox record: 90
+    matched official file to the competing-talker subset
+    onset difference (official - reconstructed), n=90:
+      mean -2434.3379 s   sd 1292.6562 s   min -3616.9670   max -11.7338
+      median -1814.2019 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-12 ===
+    official trials 90   psychtoolbox trials 90   startT 22.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean -14.9884 s   sd 0.6946 s   min -16.1644   max -13.8452
+      median -15.0109 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-13 ===
+    official trials 90   psychtoolbox trials 90   startT 1021.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean -12.2560 s   sd 0.7016 s   min -13.4755   max -11.1162
+      median -12.2857 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-14 ===
+    official trials 90   psychtoolbox trials 90   startT 14.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean -11.5013 s   sd 0.7301 s   min -12.7623   max -10.2947
+      median -11.5341 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-15 ===
+    official trials 90   psychtoolbox trials 90   startT 1.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean -18.3754 s   sd 0.6669 s   min -19.5021   max -17.2759
+      median -18.4019 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-16 ===
+    official trials 90   psychtoolbox trials 90   startT 13.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean -14.6874 s   sd 0.7357 s   min -15.9152   max -13.4380
+      median -14.7306 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-19 ===
+    official trials 90   psychtoolbox trials 90   startT 28.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean +157.3649 s   sd 94.4394 s   min -12.5381   max +328.8648
+      median +152.2583 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-21 ===
+    official trials 90   psychtoolbox trials 90   startT 1.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean +2.2021 s   sd 0.6867 s   min +1.0538   max +3.3920
+      median +2.1642 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-22 ===
+    official trials 90   psychtoolbox trials 90   startT 1.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean +10.2784 s   sd 0.6538 s   min +9.1616   max +11.3863
+      median +10.2387 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-23 ===
+    official trials 90   psychtoolbox trials 90   startT 1.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean +11.4319 s   sd 0.7290 s   min +10.1863   max +12.6232
+      median +11.3988 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-24 ===
+    official trials 90   psychtoolbox trials 90   startT 1.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean +7.2895 s   sd 0.6627 s   min +6.1742   max +8.4335
+      median +7.2416 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+=== sub-25 ===
+    official trials 90   psychtoolbox trials 90   startT 1.000
+    competing-talker trials in psychtoolbox record: 90
+    onset difference (official - reconstructed), n=90:
+      mean +1.6225 s   sd 0.7319 s   min +0.3810   max +2.8349
+      median +1.6060 s   |d| > 0.1 s: 90 of 90
+    label cross-tab (rows = our code, cols = official):
+      code     Center     Left    Right
+      1             0        0       30
+      2             0       30        0
+      3            30        0        0
+      deterministic mapping: {1: 'Right', 2: 'Left', 3: 'Center'}  (one-to-one, no exceptions)
+    correctness agreement with correct_both_response: 100.00%
+
+--- onset agreement summary ---
+sub        n   mean d (s)    sd (s)    max|d|   >0.1s
+08        90   -2434.3379 1292.6562 3616.9670      90
+12        90     -14.9884    0.6946   16.1644      90
+13        90     -12.2560    0.7016   13.4755      90
+14        90     -11.5013    0.7301   12.7623      90
+15        90     -18.3754    0.6669   19.5021      90
+16        90     -14.6874    0.7357   15.9152      90
+19        90    +157.3649   94.4394  328.8648      90
+21        90      +2.2021    0.6867    3.3920      90
+22        90     +10.2784    0.6538   11.3863      90
+23        90     +11.4319    0.7290   12.6232      90
+24        90      +7.2895    0.6627    8.4335      90
+25        90      +1.6225    0.7319    2.8349      90
+
+across subjects: mean offset -192.9964 s (range -2434.3379 to +157.3649); worst single-trial |d| 3616.9670 s; 1080 of 1080 trials off by more than 0.1 s
+
+--- label mapping ---
+sub-08: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-12: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-13: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-14: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-15: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-16: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-19: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-21: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-22: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-23: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-24: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+sub-25: {1: 'Right', 2: 'Left', 3: 'Center'}  clean
+distinct mappings across subjects: 1  -> consistent, the left/right assignment is now established
+
+--- correctness ---
+sub-08: 100.00%
+sub-12: 100.00%
+sub-13: 100.00%
+sub-14: 100.00%
+sub-15: 100.00%
+sub-16: 100.00%
+sub-19: 100.00%
+sub-21: 100.00%
+sub-22: 100.00%
+sub-23: 100.00%
+sub-24: 100.00%
+sub-25: 100.00%

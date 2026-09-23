@@ -1,0 +1,115 @@
+$ python -u validate_alignment.py
+
+
+=== reconstructed onsets (startT + Trigger3) ===
+  sub-08   HbO/HbR r = +0.674   peak   7.3 s   amp -1.0140 uM
+  sub-12   HbO/HbR r = -0.442   peak   5.7 s   amp -1.6237 uM
+  sub-13   HbO/HbR r = -0.855   peak   6.9 s   amp +7.6472 uM
+  sub-14   HbO/HbR r = -0.713   peak   7.7 s   amp +3.8930 uM
+  sub-15   HbO/HbR r = +0.201   peak   2.5 s   amp -1.1535 uM
+  sub-16   HbO/HbR r = -0.855   peak   9.8 s   amp -2.0882 uM
+  sub-19   HbO/HbR r = -0.747   peak  11.9 s   amp +1.2810 uM
+  sub-21   HbO/HbR r = -0.678   peak  11.9 s   amp -3.0860 uM
+  sub-22   HbO/HbR r = -0.960   peak  11.9 s   amp -0.8405 uM
+  sub-23   HbO/HbR r = -0.529   peak   8.1 s   amp -1.0230 uM
+  sub-24   HbO/HbR r = -0.593   peak   5.2 s   amp -1.5299 uM
+  sub-25   HbO/HbR r = +0.089   peak   5.0 s   amp +0.9530 uM
+  GROUP    HbO/HbR r = -0.681   peak   4.9 s   amp +0.8973 uM   (1079 trials)
+  subjects with negative HbO/HbR correlation: 9/12   median r = -0.635
+  peak latency in the canonical 4-8 s window: 6/12 subjects
+
+  group HbO (O) and HbR (R) vs time, range -0.117 to +0.897 uM
+           -2.0s     O .R                                         -0.0444
+           -1.6s      O.R                                         -0.0356
+           -1.2s       *                                          -0.0065
+           -0.8s       RO                                         +0.0208
+           -0.4s      R. O                                        +0.0332
+  onset >   0.0s       R O                                        +0.0513
+            0.4s       .R   O                                     +0.1117
+            0.8s       . R      O                                 +0.1957
+            1.2s       .  R        O                              +0.2552
+            1.6s       .   R         O                            +0.3049
+            2.0s       .   R            O                         +0.3757
+            2.4s       .R                    O                    +0.4850
+            2.8s      R.                          O               +0.5992
+            3.2s      R.                             O            +0.6680
+            3.6s       .R                             O           +0.7028
+            4.0s       .R                                O        +0.7671
+            4.4s       R                                     O    +0.8566
+            4.8s     R .                                       O  +0.8972
+            5.2s     R .                                      O   +0.8823
+            5.6s     R .                                     O    +0.8450
+            6.0s    R  .                                   O      +0.7993
+            6.4s   R   .                                 O        +0.7557
+            6.8s  R    .                               O          +0.7255
+            7.2s  R    .                              O           +0.7012
+            7.6s    R  .                            O             +0.6513
+            8.0s      R.                         O                +0.5871
+            8.4s       R                      O                   +0.5158
+            8.8s       R                   O                      +0.4407
+            9.2s       R                O                         +0.3888
+            9.6s       R              O                           +0.3426
+           10.0s       .R           O                             +0.2830
+           10.4s       .  R      O                                +0.2299
+           10.8s       .  R     O                                 +0.1872
+           11.2s       .R     O                                   +0.1637
+           11.6s       R       O                                  +0.1664
+
+=== null control (random onsets) ===
+  sub-08   HbO/HbR r = -0.025   peak   8.4 s   amp -1.5384 uM
+  sub-12   HbO/HbR r = +0.100   peak  11.9 s   amp +0.9976 uM
+  sub-13   HbO/HbR r = +0.866   peak   8.6 s   amp +7.6434 uM
+  sub-14   HbO/HbR r = -0.779   peak   5.2 s   amp -2.0024 uM
+  sub-15   HbO/HbR r = -0.038   peak   7.2 s   amp -0.7999 uM
+  sub-16   HbO/HbR r = -0.493   peak   6.9 s   amp -1.5146 uM
+  sub-19   HbO/HbR r = -0.932   peak   7.5 s   amp -1.2168 uM
+  sub-21   HbO/HbR r = -0.339   peak   6.0 s   amp +0.5673 uM
+  sub-22   HbO/HbR r = +0.307   peak   9.6 s   amp -0.4308 uM
+  sub-23   HbO/HbR r = -0.595   peak   4.7 s   amp -0.8406 uM
+  sub-24   HbO/HbR r = -0.562   peak   9.2 s   amp -0.4880 uM
+  sub-25   HbO/HbR r = -0.350   peak  11.8 s   amp +0.6115 uM
+  GROUP    HbO/HbR r = +0.610   peak  11.9 s   amp +0.3975 uM   (1080 trials)
+  subjects with negative HbO/HbR correlation: 9/12   median r = -0.345
+  peak latency in the canonical 4-8 s window: 6/12 subjects
+
+  null-set HbO (O) and HbR (R) vs time, range -0.121 to +0.397 uM
+           -2.0s         *  .                                     -0.0456
+           -1.6s          OR.                                     -0.0340
+           -1.2s            .RO                                   +0.0121
+           -0.8s            .  RO                                 +0.0386
+           -0.4s            . *                                   +0.0159
+  onset >   0.0s         R  O                                     -0.0095
+            0.4s      R    O.                                     -0.0139
+            0.8s       R  O .                                     -0.0257
+            1.2s       O    R                                     -0.0610
+            1.6s    O       .    R                                -0.1020
+            2.0s  O         .     R                               -0.1207
+            2.4s    O       .   R                                 -0.0946
+            2.8s         O  .   R                                 -0.0369
+            3.2s           O.       R                             -0.0219
+            3.6s       O    .              R                      -0.0672
+            4.0s   O        .                     R               -0.1105
+            4.4s     O      .                      R              -0.0852
+            4.8s           O.                  R                  -0.0192
+            5.2s            .  O        R                         +0.0232
+            5.6s            .   O   R                             +0.0373
+            6.0s            .  O   R                              +0.0333
+            6.4s           O.        R                            -0.0188
+            6.8s     O      .             R                       -0.0826
+            7.2s     O      .                 R                   -0.0829
+            7.6s           O.                   R                 -0.0205
+            8.0s            .      O             R                +0.0807
+            8.4s            .                O     R              +0.1891
+            8.8s            .                      O R            +0.2573
+            9.2s            .                         OR          +0.2885
+            9.6s            .                        R  O         +0.3139
+           10.0s            .                    R        O       +0.3346
+           10.4s            .                   R        O        +0.3322
+           10.8s            .                      R    O         +0.3164
+           11.2s            .                        R   O        +0.3256
+           11.6s            .                       R       O     +0.3611
+
+=== verdict ===
+  group HbO/HbR correlation   true -0.681   null +0.610
+  median subject correlation  true -0.635   null -0.345
+  peak HbO amplitude          true 0.8973 uM   null 0.3975 uM   ratio 2.3x

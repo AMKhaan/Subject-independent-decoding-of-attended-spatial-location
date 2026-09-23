@@ -1,0 +1,30 @@
+$ python -u behaviour_correlation.py
+
+12 participants; behavioural accuracy 48.9-96.7%
+
+=== behaviour vs decoding ===
+  behaviour ~ within-subject 3-class (correct only) n=12   rho +0.63 p 0.029    r +0.34 p 0.285
+  behaviour ~ within-subject 3-class (all trials) n=12   rho +0.65 p 0.023    r +0.50 p 0.096
+  behaviour ~ LOSO 3-class (correct only)        n=12   rho +0.21 p 0.519    r +0.20 p 0.536
+  behaviour ~ within-subject lateral             n=12   rho +0.44 p 0.154    r +0.46 p 0.131
+  behaviour ~ LOSO lateral                       n=12   rho +0.62 p 0.032    r +0.56 p 0.056
+
+  10 comparisons, none corrected. smallest p = 0.023, Bonferroni threshold 0.05/10 = 0.0050 -> none survives
+
+=== consistency between the two decoding problems ===
+  (not independent: the lateral problem reuses 720 of the same trials)
+  lateral within ~ 3-class within (all trials)   n=12   rho +0.74 p 0.006    r +0.69 p 0.014
+  lateral within ~ 3-class within (correct only) n=12   rho +0.74 p 0.006    r +0.62 p 0.031
+
+=== within-subject vs LOSO, same participants (§4.2) ===
+  (a participant who decodes well within-subject need not transfer)
+  within 3-class ~ LOSO 3-class (correct only)   n=12   rho -0.05 p 0.880    r -0.15 p 0.633
+
+=== the cost of excluding sub-25, as Ning et al. do ===
+  within 3-class (correct only)    12 subj  39.91%   11 subj  40.11%   +0.21 pp
+  LOSO 3-class (correct only)      12 subj  35.94%   11 subj  35.90%   -0.04 pp
+  within lateral                   12 subj  59.39%   11 subj  60.76%   +1.37 pp
+
+=== spread across participants (within-subject, correct only) ===
+  best  sub-21 54.25%      worst sub-14 24.86%
+  lateral: best sub-21 81.33%   worst sub-22 37.33%

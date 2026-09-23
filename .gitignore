@@ -1,0 +1,13 @@
+# The datasets are never redistributed here. Download ds004830 and ds007738 from
+# OpenNeuro; see the README for the environment variables that point at them.
+Dataset/
+raw/
+
+# Epoch tensors and other derived arrays, about 900 MB in total. Rebuilt by the
+# build stages in a few minutes each, so there is no reason to version them.
+derived/
+Code/analysis/data/
+Code/analysis/data_null/
+
+__pycache__/
+*.pyc

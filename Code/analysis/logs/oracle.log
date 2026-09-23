@@ -1,0 +1,10 @@
+$ python -u oracle_check.py
+
+31288 windows, 24 channel groups, 3 label values
+  channel-group recovery (RF, 24-way): 70.76% (sd 0.53, chance 4.17%)
+  protocol D label accuracy (RF):       79.28% (sd 0.32)
+  protocol D label accuracy (logistic): 49.39% (sd 0.40)
+  group->label mapping single-valued:   True
+  oracle ceiling given perfect group ID: 100.00%
+  majority class:                        45.69%
+wrote oracle_check.json

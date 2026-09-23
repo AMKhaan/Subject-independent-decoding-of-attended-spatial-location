@@ -1,0 +1,47 @@
+What separates the subjects who decode from those who do not?
+
+--- per-subject table (corrected build) ---
+sub       within    LOSO      v1    gain   behav  NingAcc  NingPrn  ourPrn   offset
+sub-08     63.00   60.32   37.75  +25.25   94.44       67        2       0      n/a
+sub-12     90.03   47.62   40.22  +49.81   93.33       84       18      10    -15.0
+sub-13     51.25   34.48   42.14   +9.11   96.67       33        8      19    -12.3
+sub-14     27.14   30.00   24.86   +2.28   77.78       46       10       5    -11.5
+sub-15     48.55   45.45   38.70   +9.85   74.44       35        2       0    -18.4
+sub-16     73.18   54.12   46.35  +26.83   94.44       62       11       0    -14.7
+sub-19     87.91   47.13   40.03  +47.88   96.67       42        7       3      n/a
+sub-21     59.18   42.47   54.25   +4.93   81.11       55       19       0     +2.2
+sub-22     54.04   43.66   32.40  +21.64   78.89       40        5       0    +10.3
+sub-23     40.57   39.44   35.01   +5.56   78.89       46       18       1    +11.4
+sub-24     69.73   53.49   49.54  +20.19   95.56       33        6       1     +7.3
+sub-25     29.11   34.09   37.61   -8.50   48.89       30       12       0     +1.6
+
+--- correlates of corrected within-subject accuracy (n=12 unless noted) ---
+  behavioural accuracy                         n=12  r=+0.743 (p=0.006)   rho=+0.699 (p=0.011)
+  Ning et al. published 3-class accuracy       n=12  r=+0.541 (p=0.069)   rho=+0.470 (p=0.123)
+  channels pruned (Ning et al. Table 1)        n=12  r=+0.012 (p=0.969)   rho=-0.025 (p=0.940)
+  channels pruned (our SNR 1.5)                n=12  r=+0.100 (p=0.758)   rho=+0.101 (p=0.755)
+  |onset offset| corrected                     n=10  r=+0.295 (p=0.408)   rho=+0.236 (p=0.511)   10 subjects
+
+--- correlates of cross-subject (LOSO) accuracy ---
+  behavioural accuracy                         n=12  r=+0.565 (p=0.055)   rho=+0.506 (p=0.093)
+  within-subject accuracy                      n=12  r=+0.698 (p=0.012)   rho=+0.811 (p=0.001)
+  |onset offset| corrected                     n=10  r=+0.266 (p=0.458)   rho=+0.358 (p=0.310)   10 subjects
+
+--- what the correction bought, per subject ---
+  |onset offset| vs accuracy gain              n=10  r=+0.515 (p=0.128)   rho=+0.564 (p=0.090)   10 subjects
+  misaligned accuracy vs gain                  n=12  r=+0.138 (p=0.669)   rho=+0.273 (p=0.391)
+
+--- reading ---
+The decisive one is '|onset offset| corrected' against within-subject accuracy.
+If the correction did what we think, a subject's *corrected* accuracy should be
+independent of how large a correction they needed -- the offset is a property of
+the clock, not of the participant. A strong correlation there would mean the
+correction is doing something else and the result needs re-examining.
+
+'|onset offset| vs accuracy gain' should be positive: subjects whose onsets were
+further off had more to gain. That is the mechanism claim, stated as a number.
+
+n = 12 (10 where the offset is involved). Nothing here survives multiplicity
+correction and none is offered as a test; these are descriptive.
+
+figure -> subject-spread.png
