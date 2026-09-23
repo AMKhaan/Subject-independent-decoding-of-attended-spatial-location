@@ -16,6 +16,16 @@ abstract: >-
   eye movement. The datasets themselves are not redistributed here.
 type: software
 license: MIT
+version: v1.0.0
+date-released: '2026-09-23'
+doi: 10.5281/zenodo.22911029
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22911029
+    description: Concept DOI, always the newest version
+  - type: doi
+    value: 10.5281/zenodo.22911030
+    description: Version DOI for v1.0.0
 authors:
   - family-names: Khan
     given-names: Ahmad Muzaffar

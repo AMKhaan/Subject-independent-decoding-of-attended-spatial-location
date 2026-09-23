@@ -1,5 +1,7 @@
 # Subject-independent decoding of attended spatial location from fNIRS
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22911029.svg)](https://doi.org/10.5281/zenodo.22911029)
+
 Analysis code and results for a study of whether the location a listener attends to can be
 decoded from functional near-infrared spectroscopy **in a person who was not in the training
 set**, how quickly accuracy grows once that person contributes a few labelled trials, and how
@@ -84,9 +86,16 @@ v2.0.0 events, a shuffled-onset control and a global lag sweep.
 
 ## How to cite
 
-Cite the archived release, not this URL. Metadata for the citation is in
-[`CITATION.cff`](CITATION.cff); the Zenodo DOI is added to this section once the first release
-is archived.
+Cite the archived release, not this URL. The concept DOI
+[10.5281/zenodo.22911029](https://doi.org/10.5281/zenodo.22911029) always resolves to the
+newest version; the version archived for the paper is
+[10.5281/zenodo.22911030](https://doi.org/10.5281/zenodo.22911030) (v1.0.0).
+
+> Khan A M, Nasir B and Khan H M 2026 *Analysis code for subject-independent decoding of
+> attended spatial location from fNIRS* (v1.0.0). Zenodo.
+> https://doi.org/10.5281/zenodo.22911030
+
+Machine-readable metadata is in [`CITATION.cff`](CITATION.cff).
 
 ## Licence
 
